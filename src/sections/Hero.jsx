@@ -103,7 +103,7 @@ export const Hero = () => {
                             <div className="absolute -bottom-4 -right-4 bg-glass rounded px-4 py-3 animate-float">
                                 <div className="flex items-center gap-3">
                                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_#22c55e]" />
-                                    <span className="text-sm font-medium text-white">Beschikbaar voor stage</span>
+                                    <span className="text-sm font-medium text-primary">Beschikbaar voor stage</span>
                                 </div>
                             </div>
 
