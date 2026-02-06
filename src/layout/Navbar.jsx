@@ -48,7 +48,7 @@ export const Navbar = () => {
         {/* Call to action button */}
         <div className="hidden md:block">
           <Button size="sm">
-            <a href="#contact">Neem contact op</a>
+            <a href="mailto:asepewa123@gmail.com">Neem contact op</a>
           </Button>
         </div>
 

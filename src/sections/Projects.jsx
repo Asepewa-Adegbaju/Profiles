@@ -7,16 +7,16 @@ const projects = [
         description: "Mijn eerste grote stap in React. Ik heb dit project gebruikt om de basis van component-architectuur en hooks onder de knie te krijgen, waarbij ik een tutorial als blauwdruk heb gebruikt en deze heb aangepast naar mijn eigen stijl.",
         image: "/react1.png",
         tags: ["React", "Tailwind CSS", "Lucide React", "Framer Motion", "Git"],
-        link: "https://jouw-demo-link.vercel.app",
-        github: "https://github.com/jouw-gebruikersnaam/jouw-repo"
+        link: "https://profiles-beta-one.vercel.app/",
+        github: "https://github.com/Asepewa-Adegbaju/Profiles.git"
     },
     {
         title: "GameStars Full-Stack Platform",
         description: "Een interactief gaming platform waar ik PHP en HTML5 heb gecombineerd tot een dynamisch geheel. In plaats van statische pagina's, heb ik een systeem ontwikkeld waarbij PHP-logica de HTML-structuur aanstuurt. Dit zorgt ervoor dat game-content, reviews en media automatisch op de juiste plek verschijnen vanuit een centrale data-structuur.",
         image: "/Gamestars2.png",
         tags: ["PHP", "HTML5", "Vanilla CSS", "JavaScript", "Dynamic Rendering"],
-        link: "https://jouw-link-hier.nl",
-        github: "https://github.com/jouw-gebruikersnaam/gamestars-php"
+        link: "https://gamestars-platform.vercel.app/",
+        github: "https://github.com/Asepewa-Adegbaju/gamestars-platform.git"
     }
 ];
 
