@@ -19,7 +19,7 @@ export const Hero = () => {
         <section className="relative min-h-screen flex items-center overflow-hidden">
             {/*background*/}
             <div className="absolute inset-0"> 
-                <img className="w-full h-full object-cover opacity-40" src="/hero-bg.jpg" alt="Hero background" /> 
+                <img className="w-full h-full object-cover opacity-40" src="/bg-red.png" alt="Hero background" /> 
             </div>
             <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
             
@@ -28,7 +28,7 @@ export const Hero = () => {
                 {[...Array(30)].map((_, i) => (
                     <div key={i} className="absolute w-1.5 h-1.5 rounded-full opacity-60"
                         style={{
-                            backgroundColor: "#b8870b",
+                            backgroundColor: "#e63946",
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,
                             animation: `slow-drift ${Math.random() * 20}s ease-in-out infinite`,

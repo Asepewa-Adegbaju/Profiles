@@ -6,7 +6,6 @@ const navLinks = [
   { href: "#about", label: "Over mij" },
   { href: "#projects", label: "Projecten" },
   { href: "#experience", label: "Ervaring" },
-  { href: "#testimonials", label: "Testimonials" },
 ];
 
 export const Navbar = () => {

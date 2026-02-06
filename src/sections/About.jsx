@@ -1,6 +1,6 @@
 import { Rocket, Cpu, Telescope, Handshake } from "lucide-react"
 
-const higlights =[
+const highlights =[
     {
         icon:Rocket,
         title:"Gedreven Autodidact",
@@ -28,7 +28,7 @@ const higlights =[
 
 export const About = () => {
     return (
-    <section id="about"className="py-32 relative overflow-hidden">
+    <section id="about" className="py-32 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
                 {/*Left */}
@@ -67,12 +67,12 @@ export const About = () => {
             </div>
             {/*right */}
             <div className="grid sm:grid-cols-2 gap-6">
-                {higlights.map((item,idx) =>
+                {highlights.map((item,idx) =>
                 <div key={idx} className="glass p-6 rounded-2xl animate-fade-in "
                 style={{animationDelay:`${(idx +1)*100}ms`}}
                 >
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
-                        <item.icon classname="w-6 h-6 text-primary" />
+                        <item.icon className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
