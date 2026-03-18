@@ -17,6 +17,13 @@ const projects = [
         tags: ["PHP", "HTML5", "Vanilla CSS", "JavaScript", "Dynamic Rendering"],
         link: "https://gamestars-platform.vercel.app/",
         github: "https://github.com/Asepewa-Adegbaju/gamestars-platform.git"
+    },
+    {   title: "MarketBeacon Crypto Tracker",
+        description: "Een moderne cryptocurrency tracker gebouwd met React en Vite, waar ik real-time marktgegevens heb geïntegreerd via de CoinGecko API. In plaats van statische data, heb ik een dynamisch systeem ontwikkeld waarbij gebruikers kunnen zoeken, sorteren en schakelen tussen grid- en lijstweergaven. Dit zorgt ervoor dat crypto-informatie zoals prijzen, marktwaarde en volume automatisch wordt weergegeven vanuit een centrale API-structuur.",
+        image: "/crypto-tracker.png",
+        tags: ["React", "Vite", "JavaScript", "CSS", "CoinGecko API", "React Router"],
+        link: "https://marketbeacon-crypto-tracker.vercel.app/",
+        github: "https://github.com/Asepewa-Adegbaju/Crypto-Tracker.git"
     }
 ];
 
