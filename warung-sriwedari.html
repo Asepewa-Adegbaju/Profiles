@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warung Sriwedari — Authentiek Javaans Restaurant Rotterdam</title>
+  <meta name="description" content="Warung Sriwedari brengt de authentieke smaken van Yogyakarta naar het hart van Rotterdam. Genieten van rijsttafel, rendang en de beste satay van de stad." />
+  <link rel="canonical" href="https://warungsriwedari.nl/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:url" content="https://warungsriwedari.nl/" />
+  <meta property="og:title" content="Warung Sriwedari — Authentiek Javaans Restaurant Rotterdam" />
+  <meta property="og:description" content="Warung Sriwedari brengt de authentieke smaken van Yogyakarta naar het hart van Rotterdam. Genieten van rijsttafel, rendang en de beste satay van de stad." />
+  <meta property="og:locale" content="nl_NL" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Warung Sriwedari — Authentiek Javaans Restaurant Rotterdam" />
+  <meta name="twitter:description" content="Authentiek Javaans restaurant in Rotterdam. Rijsttafel, rendang, satay." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300;1,9..144,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Warung Sriwedari",
+    "description": "Authentiek Javaans restaurant in Rotterdam. Traditionele gerechten bereid met recepten uit Yogyakarta.",
+    "url": "https://warungsriwedari.nl/",
+    "telephone": "+31104128834",
+    "email": "info@warungsriwedari.nl",
+    "servesCuisine": ["Indonesian", "Javanese"],
+    "priceRange": "€€",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "312"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Witte de Withstraat 48",
+      "addressLocality": "Rotterdam",
+      "postalCode": "3012 BN",
+      "addressCountry": "NL"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "12:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday","Sunday"],
+        "opens": "12:00",
+        "closes": "22:30"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/warungsriwedari",
+      "https://www.facebook.com/warungsriwedari"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ─── CSS Custom Properties ─── */
+    :root {
+      --bg: #120c1e;
+      --bg-warm: #1c1228;
+      --amber: #d4960e;
+      --amber-light: #f0b429;
+      --terracotta: #c0634c;
+      --cream: #f0e6d2;
+      --cream-muted: #c8b89a;
+      --text-muted: #a09278;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Manrope', system-ui, sans-serif;
+      --nav-h: 72px;
+      --section-pad: clamp(5rem, 10vw, 8rem);
+      --radius: 3px;
+    }
+
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Noise overlay ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.028;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      background-size: 300px 300px;
+    }
+
+    /* ─── Typography ─── */
+    h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height: 1.15; }
+    p { font-weight: 300; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── Utility ─── */
+    .container {
+      width: min(100%, 1160px);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 3rem);
+    }
+    .section-label {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--amber);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 1px;
+      background: var(--amber);
+      flex-shrink: 0;
+    }
+    .amber { color: var(--amber-light); }
+    .italic { font-style: italic; }
+
+    /* ─── Reveal Animation ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.12s; }
+    .reveal-delay-2 { transition-delay: 0.24s; }
+    .reveal-delay-3 { transition-delay: 0.36s; }
+    .reveal-delay-4 { transition-delay: 0.48s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal.visible { opacity: 1; transform: none; transition: none; }
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    /* ════════════════════════════════════════
+       NAV
+    ════════════════════════════════════════ */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .site-nav.scrolled {
+      background: rgba(18, 12, 30, 0.88);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      border-bottom-color: rgba(212, 150, 14, 0.15);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--amber-light);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+      transition: color 0.25s;
+      padding-block: 0.25rem;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--amber);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--amber);
+      color: var(--bg);
+      padding: 0.6rem 1.35rem;
+      border-radius: var(--radius);
+      transition: background 0.25s, color 0.25s;
+      white-space: nowrap;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .nav-cta:hover { background: var(--amber-light); }
+
+    /* Mobile nav */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--cream);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 12, 30, 0.97);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 300;
+      color: var(--cream);
+    }
+    .mobile-menu a:hover { color: var(--amber-light); }
+    .mobile-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: none;
+      border: none;
+      color: var(--cream-muted);
+      font-size: 1.75rem;
+      cursor: pointer;
+      min-width: 44px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* ════════════════════════════════════════
+       HERO
+    ════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      padding-bottom: clamp(3rem, 6vw, 5rem);
+    }
+
+    /* Layered background */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 60% at 75% 30%, rgba(192, 99, 76, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 50% at 20% 70%, rgba(212, 150, 14, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 80% at 50% 50%, rgba(28, 18, 40, 0.6) 0%, transparent 100%),
+        var(--bg);
+      z-index: 0;
+    }
+
+    /* Batik SVG pattern overlay */
+    .hero-batik {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      opacity: 0.08;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cdefs%3E%3Cpattern id='batik' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath d='M40,5 L75,40 L40,75 L5,40 Z' fill='none' stroke='%23d4960e' stroke-width='0.5'/%3E%3Cpath d='M40,15 L65,40 L40,65 L15,40 Z' fill='none' stroke='%23d4960e' stroke-width='0.5'/%3E%3Ccircle cx='40' cy='40' r='4' fill='none' stroke='%23d4960e' stroke-width='0.5'/%3E%3Cline x1='40' y1='5' x2='40' y2='15' stroke='%23d4960e' stroke-width='0.5'/%3E%3Cline x1='40' y1='65' x2='40' y2='75' stroke='%23d4960e' stroke-width='0.5'/%3E%3Cline x1='5' y1='40' x2='15' y2='40' stroke='%23d4960e' stroke-width='0.5'/%3E%3Cline x1='65' y1='40' x2='75' y2='40' stroke='%23d4960e' stroke-width='0.5'/%3E%3Ccircle cx='5' cy='5' r='1.5' fill='none' stroke='%23d4960e' stroke-width='0.5'/%3E%3Ccircle cx='75' cy='5' r='1.5' fill='none' stroke='%23d4960e' stroke-width='0.5'/%3E%3Ccircle cx='5' cy='75' r='1.5' fill='none' stroke='%23d4960e' stroke-width='0.5'/%3E%3Ccircle cx='75' cy='75' r='1.5' fill='none' stroke='%23d4960e' stroke-width='0.5'/%3E%3Cline x1='5' y1='5' x2='14' y2='14' stroke='%23d4960e' stroke-width='0.3'/%3E%3Cline x1='75' y1='5' x2='66' y2='14' stroke='%23d4960e' stroke-width='0.3'/%3E%3Cline x1='5' y1='75' x2='14' y2='66' stroke='%23d4960e' stroke-width='0.3'/%3E%3Cline x1='75' y1='75' x2='66' y2='66' stroke='%23d4960e' stroke-width='0.3'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='80' height='80' fill='url(%23batik)'/%3E%3C/svg%3E");
+      background-size: 80px 80px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding-inline: clamp(1.25rem, 5vw, 3rem);
+      max-width: 1160px;
+      margin-inline: auto;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 1.5px;
+      background: var(--amber);
+      flex-shrink: 0;
+    }
+    .hero h1 {
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 300;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--amber-light);
+    }
+    .hero-sub {
+      max-width: 380px;
+      color: var(--cream-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 2.25rem;
+      font-weight: 300;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+    .btn-primary {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--amber);
+      color: var(--bg);
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius);
+      transition: background 0.25s;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .btn-primary:hover { background: var(--amber-light); }
+    .btn-ghost {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+      border: 1px solid rgba(192, 179, 154, 0.35);
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius);
+      transition: border-color 0.25s, color 0.25s;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .btn-ghost:hover { border-color: var(--cream-muted); color: var(--cream); }
+
+    /* Scroll indicator */
+    .hero-scroll {
+      position: absolute;
+      bottom: 3rem;
+      right: clamp(1.25rem, 5vw, 3rem);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .hero-scroll span {
+      font-family: var(--font-body);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      writing-mode: vertical-rl;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, var(--amber) 0%, transparent 100%);
+      animation: scrollPulse 2.2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.15); }
+    }
+
+    /* ════════════════════════════════════════
+       ABOUT
+    ════════════════════════════════════════ */
+    .about {
+      padding-block: var(--section-pad);
+      position: relative;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem, 6vw, 5rem);
+      align-items: center;
+    }
+    @media (max-width: 860px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Decorative SVG visual */
+    .about-visual {
+      position: relative;
+    }
+    .about-svg-wrap {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 440px;
+    }
+    .about-svg-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -18px;
+      right: -18px;
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      border: 1px solid rgba(212, 150, 14, 0.25);
+      border-radius: var(--radius);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .about-svg-main {
+      width: 100%;
+      aspect-ratio: 4/5;
+      display: block;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    /* About text */
+    .about-text { max-width: 520px; }
+    .about-text h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+    .about-text p {
+      color: var(--cream-muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-divider {
+      width: 2.5rem;
+      height: 1.5px;
+      background: var(--amber);
+      margin-block: 1.75rem;
+    }
+
+    /* ════════════════════════════════════════
+       MENU
+    ════════════════════════════════════════ */
+    .menu-section {
+      background: var(--bg-warm);
+      padding-block: var(--section-pad);
+      position: relative;
+      overflow: hidden;
+    }
+    .menu-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(212, 150, 14, 0.3), transparent);
+    }
+    .menu-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(212, 150, 14, 0.3), transparent);
+    }
+    .menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: clamp(3rem, 6vw, 4.5rem);
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .menu-header h2 {
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+    }
+    .menu-header h2 em {
+      font-style: italic;
+      color: var(--amber-light);
+    }
+    .menu-hint {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-align: right;
+    }
+
+    .menu-categories {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(3rem, 6vw, 4.5rem);
+    }
+    .menu-category-title {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .menu-category-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(212, 150, 14, 0.15);
+    }
+
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+      gap: 0;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+      transition: background 0.2s;
+    }
+    .menu-item:last-child { border-bottom: none; }
+    .menu-item-info { flex: 1; }
+    .menu-item-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--cream);
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.01em;
+    }
+    .menu-item-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+    .menu-item-price {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--amber-light);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ════════════════════════════════════════
+       REVIEWS
+    ════════════════════════════════════════ */
+    .reviews {
+      padding-block: var(--section-pad);
+    }
+    .reviews-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: clamp(3rem, 6vw, 4.5rem);
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .reviews-header h2 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); }
+    .rating-display {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.25rem;
+    }
+    .rating-number {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--amber-light);
+      line-height: 1;
+    }
+    .rating-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+    .rating-stars { color: var(--amber); letter-spacing: 0.1em; font-size: 0.85rem; }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .reviews-grid { grid-template-columns: 1fr; }
+      .review-card:nth-child(2) { margin-top: 0 !important; }
+    }
+    .review-card {
+      background: var(--bg-warm);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: calc(var(--radius) + 1px);
+      padding: clamp(1.5rem, 3vw, 2rem);
+      position: relative;
+      transition: border-color 0.3s;
+    }
+    .review-card:hover { border-color: rgba(212, 150, 14, 0.2); }
+    .review-card:nth-child(2) { margin-top: 2.5rem; }
+    .review-quote {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      line-height: 0.5;
+      color: var(--amber);
+      opacity: 0.35;
+      margin-bottom: 0.75rem;
+      font-style: italic;
+      user-select: none;
+    }
+    .review-text {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--cream-muted);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+    .review-stars { color: var(--amber); font-size: 0.8rem; margin-bottom: 1rem; letter-spacing: 0.05em; }
+    .review-author { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 1rem; }
+    .review-name {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: var(--cream);
+      margin-bottom: 0.2rem;
+    }
+    .review-meta {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ════════════════════════════════════════
+       CONTACT
+    ════════════════════════════════════════ */
+    .contact {
+      background: var(--bg-warm);
+      padding-block: var(--section-pad);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(212, 150, 14, 0.3), transparent);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 5rem);
+      align-items: center;
+    }
+    @media (max-width: 720px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    .contact-info h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      margin-bottom: 2rem;
+    }
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-item-label {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+    .contact-item-value {
+      font-size: 0.95rem;
+      color: var(--cream-muted);
+      font-weight: 300;
+    }
+    .contact-item-value a {
+      color: var(--cream-muted);
+      transition: color 0.2s;
+    }
+    .contact-item-value a:hover { color: var(--amber-light); }
+
+    .hours-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    .hours-table td {
+      font-size: 0.88rem;
+      color: var(--cream-muted);
+      font-weight: 300;
+      padding: 0.3rem 0;
+    }
+    .hours-table td:first-child {
+      width: 40%;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    .hours-table tr.closed td { opacity: 0.5; }
+
+    /* Decorative map SVG */
+    .contact-map-wrap {
+      position: relative;
+    }
+
+    /* ════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════ */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid rgba(212, 150, 14, 0.12);
+      padding-block: 3rem;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--amber-light);
+    }
+    .footer-copy {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text-muted);
+      transition: border-color 0.25s, color 0.25s;
+    }
+    .social-link:hover { border-color: var(--amber); color: var(--amber-light); }
+    .social-link svg { width: 18px; height: 18px; fill: currentColor; }
+  </style>
+</head>
+<body>
+
+  <!-- ─── MOBILE MENU ─── -->
+  <nav class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobiel menu" aria-modal="true">
+    <button class="mobile-close" id="mobileClose" aria-label="Menu sluiten">✕</button>
+    <a href="#about" onclick="closeMobile()">Ons Verhaal</a>
+    <a href="#menu" onclick="closeMobile()">Menu</a>
+    <a href="#contact" onclick="closeMobile()">Bezoek Ons</a>
+    <a href="tel:+31104128834" class="btn-primary" style="font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;margin-top:1rem;">Reserveren</a>
+  </nav>
+
+  <!-- ─── NAV ─── -->
+  <header>
+    <nav class="site-nav" id="siteNav" aria-label="Hoofdnavigatie">
+      <div class="container">
+        <div class="nav-inner">
+          <a href="#" class="nav-logo" aria-label="Warung Sriwedari — terug naar boven">Sriwedari</a>
+          <ul class="nav-links" role="list">
+            <li><a href="#about">Ons Verhaal</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Bezoek Ons</a></li>
+          </ul>
+          <a href="tel:+31104128834" class="nav-cta" aria-label="Bel ons om te reserveren: +31 10 412 88 34">Reserveren</a>
+          <button class="nav-hamburger" id="navHamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section class="hero" aria-labelledby="hero-h1">
+      <div class="hero-batik" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal" aria-label="Jakarta, Rotterdam, Javaans">Jakarta · Rotterdam · Javaans</p>
+
+        <h1 id="hero-h1" class="reveal reveal-delay-1">
+          Warung<br>
+          <em>Sriwedari</em>
+        </h1>
+
+        <p class="hero-sub reveal reveal-delay-2">
+          Authentieke Javaanse gerechten, bereid met recepten die generaties lang bewaard zijn gebleven. Midden in het hart van Rotterdam.
+        </p>
+
+        <div class="hero-ctas reveal reveal-delay-3">
+          <a href="tel:+31104128834" class="btn-primary" aria-label="Bel om te reserveren: +31 10 412 88 34">
+            Reserveer een tafel
+          </a>
+          <a href="#menu" class="btn-ghost">Bekijk het menu</a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ─── ABOUT ─── -->
+    <section class="about" id="about" aria-labelledby="about-h2">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Visual -->
+          <div class="about-visual reveal">
+            <div class="about-svg-wrap">
+              <svg class="about-svg-main" viewBox="0 0 440 550" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decoratief Javaans patroon met batik motief" aria-hidden="true">
+                <defs>
+                  <radialGradient id="aboutGlow" cx="50%" cy="45%" r="55%">
+                    <stop offset="0%" stop-color="#2a1a3e"/>
+                    <stop offset="100%" stop-color="#120c1e"/>
+                  </radialGradient>
+                  <pattern id="batikAbout" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+                    <path d="M40,5 L75,40 L40,75 L5,40 Z" fill="none" stroke="#d4960e" stroke-width="0.5"/>
+                    <path d="M40,15 L65,40 L40,65 L15,40 Z" fill="none" stroke="#d4960e" stroke-width="0.5"/>
+                    <circle cx="40" cy="40" r="4" fill="none" stroke="#d4960e" stroke-width="0.5"/>
+                    <line x1="40" y1="5" x2="40" y2="15" stroke="#d4960e" stroke-width="0.5"/>
+                    <line x1="40" y1="65" x2="40" y2="75" stroke="#d4960e" stroke-width="0.5"/>
+                    <line x1="5" y1="40" x2="15" y2="40" stroke="#d4960e" stroke-width="0.5"/>
+                    <line x1="65" y1="40" x2="75" y2="40" stroke="#d4960e" stroke-width="0.5"/>
+                    <circle cx="5" cy="5" r="1.5" fill="none" stroke="#d4960e" stroke-width="0.5"/>
+                    <circle cx="75" cy="5" r="1.5" fill="none" stroke="#d4960e" stroke-width="0.5"/>
+                    <circle cx="5" cy="75" r="1.5" fill="none" stroke="#d4960e" stroke-width="0.5"/>
+                    <circle cx="75" cy="75" r="1.5" fill="none" stroke="#d4960e" stroke-width="0.5"/>
+                  </pattern>
+                  <clipPath id="svgClip">
+                    <rect width="440" height="550" rx="3"/>
+                  </clipPath>
+                </defs>
+                <rect width="440" height="550" fill="url(#aboutGlow)" clip-path="url(#svgClip)"/>
+                <rect width="440" height="550" fill="url(#batikAbout)" opacity="0.12" clip-path="url(#svgClip)"/>
+                <!-- Center star/flower motif -->
+                <g transform="translate(220, 240)" clip-path="url(#svgClip)">
+                  <!-- Outer ring -->
+                  <circle cx="0" cy="0" r="110" fill="none" stroke="#d4960e" stroke-width="0.6" opacity="0.3"/>
+                  <circle cx="0" cy="0" r="80" fill="none" stroke="#d4960e" stroke-width="0.6" opacity="0.4"/>
+                  <!-- 8-petal flower -->
+                  <g opacity="0.55">
+                    <ellipse cx="0" cy="-45" rx="10" ry="32" fill="#d4960e" transform="rotate(0)"/>
+                    <ellipse cx="0" cy="-45" rx="10" ry="32" fill="#d4960e" transform="rotate(45)"/>
+                    <ellipse cx="0" cy="-45" rx="10" ry="32" fill="#d4960e" transform="rotate(90)"/>
+                    <ellipse cx="0" cy="-45" rx="10" ry="32" fill="#d4960e" transform="rotate(135)"/>
+                    <ellipse cx="0" cy="-45" rx="10" ry="32" fill="#d4960e" transform="rotate(180)"/>
+                    <ellipse cx="0" cy="-45" rx="10" ry="32" fill="#d4960e" transform="rotate(225)"/>
+                    <ellipse cx="0" cy="-45" rx="10" ry="32" fill="#d4960e" transform="rotate(270)"/>
+                    <ellipse cx="0" cy="-45" rx="10" ry="32" fill="#d4960e" transform="rotate(315)"/>
+                  </g>
+                  <circle cx="0" cy="0" r="20" fill="#120c1e"/>
+                  <circle cx="0" cy="0" r="15" fill="none" stroke="#d4960e" stroke-width="1" opacity="0.6"/>
+                  <circle cx="0" cy="0" r="6" fill="#d4960e" opacity="0.5"/>
+                  <!-- Compass lines -->
+                  <line x1="0" y1="-110" x2="0" y2="110" stroke="#d4960e" stroke-width="0.4" opacity="0.2"/>
+                  <line x1="-110" y1="0" x2="110" y2="0" stroke="#d4960e" stroke-width="0.4" opacity="0.2"/>
+                  <line x1="-78" y1="-78" x2="78" y2="78" stroke="#d4960e" stroke-width="0.4" opacity="0.15"/>
+                  <line x1="78" y1="-78" x2="-78" y2="78" stroke="#d4960e" stroke-width="0.4" opacity="0.15"/>
+                </g>
+                <!-- Radial glow -->
+                <circle cx="220" cy="240" r="130" fill="#d4960e" opacity="0.04"/>
+                <!-- Text label bottom -->
+                <g transform="translate(220, 490)">
+                  <text text-anchor="middle" font-family="Manrope, sans-serif" font-size="8" font-weight="600" letter-spacing="6" fill="#d4960e" opacity="0.6" text-rendering="geometricPrecision">JAVAANS · AUTHENTIEK</text>
+                </g>
+                <!-- Corner accent lines -->
+                <line x1="20" y1="20" x2="60" y2="20" stroke="#d4960e" stroke-width="0.8" opacity="0.4"/>
+                <line x1="20" y1="20" x2="20" y2="60" stroke="#d4960e" stroke-width="0.8" opacity="0.4"/>
+                <line x1="420" y1="20" x2="380" y2="20" stroke="#d4960e" stroke-width="0.8" opacity="0.4"/>
+                <line x1="420" y1="20" x2="420" y2="60" stroke="#d4960e" stroke-width="0.8" opacity="0.4"/>
+                <line x1="20" y1="530" x2="60" y2="530" stroke="#d4960e" stroke-width="0.8" opacity="0.4"/>
+                <line x1="20" y1="530" x2="20" y2="490" stroke="#d4960e" stroke-width="0.8" opacity="0.4"/>
+                <line x1="420" y1="530" x2="380" y2="530" stroke="#d4960e" stroke-width="0.8" opacity="0.4"/>
+                <line x1="420" y1="530" x2="420" y2="490" stroke="#d4960e" stroke-width="0.8" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="about-text">
+            <p class="section-label reveal">Ons Verhaal</p>
+            <h2 id="about-h2" class="reveal reveal-delay-1">Van Yogyakarta<br>naar Rotterdam</h2>
+            <div class="about-divider reveal reveal-delay-2" aria-hidden="true"></div>
+            <p class="reveal reveal-delay-2">
+              Ibu Wati Suryani bracht in 2003 haar kostbaarste bezitting mee naar Nederland: een versleten receptenboek uit Yogyakarta, volggeschreven met de smaakgeheimen van haar moeder en grootmoeder. Wat begon als koken voor vrienden op de Witte de Withstraat, groeide al snel uit tot een restaurant dat het hart van de Rotterdamse binnenstad veroverde.
+            </p>
+            <p class="reveal reveal-delay-3">
+              Vandaag staat dochter Maya aan het fornuis, maar de recepten zijn onveranderd. Sriwedari — 'tuin der goden' in het Javaans — is precies dat geworden: een plek waar je de tijd even vergeet. De rendang wordt zes volle uren langzaam bereid, en de satay? Ronduit de beste van Rotterdam.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── MENU ─── -->
+    <section class="menu-section" id="menu" aria-labelledby="menu-h2">
+      <div class="container">
+        <div class="menu-header">
+          <div>
+            <p class="section-label reveal">Kaart</p>
+            <h2 id="menu-h2" class="reveal reveal-delay-1">Smaak die <em>vertelt</em></h2>
+          </div>
+          <p class="menu-hint reveal reveal-delay-1">Alle prijzen inclusief BTW</p>
+        </div>
+
+        <div class="menu-categories">
+
+          <!-- Rijsttafel -->
+          <div class="reveal">
+            <p class="menu-category-title">Rijsttafel</p>
+            <div class="menu-items">
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Rijsttafel Sriwedari</p>
+                  <p class="menu-item-desc">7 bijgerechten, witte rijst, prawn crackers</p>
+                </div>
+                <p class="menu-item-price">€28,50</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Rijsttafel Vegetarisch</p>
+                  <p class="menu-item-desc">6 plantaardige bereidingen, witte rijst</p>
+                </div>
+                <p class="menu-item-price">€24,00</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Rijsttafel Groots</p>
+                  <p class="menu-item-desc">10 bijgerechten, een feest voor de hele tafel</p>
+                </div>
+                <p class="menu-item-price">€36,00</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Hoofdgerechten -->
+          <div class="reveal">
+            <p class="menu-category-title">Hoofdgerechten</p>
+            <div class="menu-items">
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Rendang Daging</p>
+                  <p class="menu-item-desc">Langzaam gegaard rundvlees, 6 uur bereid</p>
+                </div>
+                <p class="menu-item-price">€19,50</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Ayam Bakar Kecap</p>
+                  <p class="menu-item-desc">Gegrilde kip met zoete ketjap-marinade</p>
+                </div>
+                <p class="menu-item-price">€16,50</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Gado-Gado</p>
+                  <p class="menu-item-desc">Groenten en tofu, huisgemaakte pindasaus</p>
+                </div>
+                <p class="menu-item-price">€14,00</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Nasi Goreng Special</p>
+                  <p class="menu-item-desc">Garnalen, kip, uitjes, gebakken ei</p>
+                </div>
+                <p class="menu-item-price">€15,50</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Soto Ayam</p>
+                  <p class="menu-item-desc">Heldere kippenbouillon met kurkuma</p>
+                </div>
+                <p class="menu-item-price">€13,50</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Babi Kecap</p>
+                  <p class="menu-item-desc">Gestoofde buikspek met ketjap en chili</p>
+                </div>
+                <p class="menu-item-price">€17,00</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Hapjes -->
+          <div class="reveal">
+            <p class="menu-category-title">Hapjes</p>
+            <div class="menu-items">
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Satay Kambing</p>
+                  <p class="menu-item-desc">4 stokjes, sate saus, lontong</p>
+                </div>
+                <p class="menu-item-price">€11,50</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Lumpia Udang</p>
+                  <p class="menu-item-desc">Knapperige loempia's met garnalen</p>
+                </div>
+                <p class="menu-item-price">€9,50</p>
+              </article>
+              <article class="menu-item">
+                <div class="menu-item-info">
+                  <p class="menu-item-name">Tahu Tempe Goreng</p>
+                  <p class="menu-item-desc">Gefrituurde tofu en tempeh</p>
+                </div>
+                <p class="menu-item-price">€8,50</p>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── REVIEWS ─── -->
+    <section class="reviews" id="reviews" aria-labelledby="reviews-h2">
+      <div class="container">
+
+        <div class="reviews-header">
+          <div>
+            <p class="section-label reveal">Gasten</p>
+            <h2 id="reviews-h2" class="reveal reveal-delay-1">Wat onze gasten<br>zeggen</h2>
+          </div>
+          <div class="rating-display reveal reveal-delay-1" aria-label="Beoordeling: 4.7 uit 5, gebaseerd op 312 reviews">
+            <p class="rating-number">4.7</p>
+            <p class="rating-stars" aria-hidden="true">★★★★★</p>
+            <p class="rating-sub">312 beoordelingen</p>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+
+          <article class="review-card reveal">
+            <p class="review-quote" aria-hidden="true">"</p>
+            <p class="review-text">De rendang is ongelooflijk. Maya laat je even in de keuken kijken als je vraagt hoe het gemaakt wordt — dat zegt genoeg over haar passie voor het vak.</p>
+            <p class="review-stars" aria-label="5 sterren">★★★★★</p>
+            <div class="review-author">
+              <p class="review-name">Petra van der Berg</p>
+              <p class="review-meta">Rotterdam · maart 2025</p>
+            </div>
+          </article>
+
+          <article class="review-card reveal reveal-delay-1">
+            <p class="review-quote" aria-hidden="true">"</p>
+            <p class="review-text">Al zeven jaar kom ik hier elke verjaardag met mijn gezin. De bediening onthoudt je naam na de tweede keer. Dat is Rotterdam zoals het hoort te zijn.</p>
+            <p class="review-stars" aria-label="5 sterren">★★★★★</p>
+            <div class="review-author">
+              <p class="review-name">Damien Kooistra</p>
+              <p class="review-meta">Rotterdam · januari 2025</p>
+            </div>
+          </article>
+
+          <article class="review-card reveal reveal-delay-2">
+            <p class="review-quote" aria-hidden="true">"</p>
+            <p class="review-text">Gado-gado zoals ik het nog nooit had gegeten. De pindasaus is zelfgemaakt — dat proef je meteen. Een restaurant dat zijn naam eer aandoet.</p>
+            <p class="review-stars" aria-label="4 sterren">★★★★☆</p>
+            <div class="review-author">
+              <p class="review-name">Sara El-Mahdi</p>
+              <p class="review-meta">Rotterdam · november 2024</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section class="contact" id="contact" aria-labelledby="contact-h2">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Info -->
+          <div class="contact-info">
+            <p class="section-label reveal">Bezoek Ons</p>
+            <h2 id="contact-h2" class="reveal reveal-delay-1">Kom langs<br>in Rotterdam</h2>
+
+            <div style="margin-top: 2.5rem;">
+              <div class="contact-item reveal reveal-delay-1">
+                <span class="contact-item-label">Adres</span>
+                <span class="contact-item-value">Witte de Withstraat 48<br>3012 BN Rotterdam</span>
+              </div>
+
+              <div class="contact-item reveal reveal-delay-2">
+                <span class="contact-item-label">Telefoon</span>
+                <span class="contact-item-value">
+                  <a href="tel:+31104128834" aria-label="Bel ons: plus 31 10 412 88 34">+31 10 412 88 34</a>
+                </span>
+              </div>
+
+              <div class="contact-item reveal reveal-delay-2">
+                <span class="contact-item-label">E-mail</span>
+                <span class="contact-item-value">
+                  <a href="mailto:info@warungsriwedari.nl">info@warungsriwedari.nl</a>
+                </span>
+              </div>
+
+              <div class="contact-item reveal reveal-delay-3">
+                <span class="contact-item-label">Openingstijden</span>
+                <table class="hours-table" aria-label="Openingstijden">
+                  <tbody>
+                    <tr class="closed">
+                      <td>Maandag</td>
+                      <td>Gesloten</td>
+                    </tr>
+                    <tr>
+                      <td>Di – Vr</td>
+                      <td>12:00 – 22:00</td>
+                    </tr>
+                    <tr>
+                      <td>Za – Zo</td>
+                      <td>12:00 – 22:30</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decorative map -->
+          <div class="contact-map-wrap reveal reveal-delay-2">
+            <svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:3px;display:block;" role="img" aria-label="Schematische kaart van de locatie op de Witte de Withstraat in Rotterdam" aria-hidden="true">
+              <defs>
+                <radialGradient id="mapGlow" cx="50%" cy="50%" r="60%">
+                  <stop offset="0%" stop-color="#2a1a3e"/>
+                  <stop offset="100%" stop-color="#120c1e"/>
+                </radialGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <rect width="480" height="400" fill="url(#mapGlow)"/>
+
+              <!-- Grid lines / city blocks -->
+              <g stroke="rgba(212,150,14,0.07)" stroke-width="1" fill="none">
+                <!-- Horizontal streets -->
+                <line x1="0" y1="80" x2="480" y2="80"/>
+                <line x1="0" y1="140" x2="480" y2="140"/>
+                <line x1="0" y1="200" x2="480" y2="200"/>
+                <line x1="0" y1="240" x2="480" y2="240"/>
+                <line x1="0" y1="300" x2="480" y2="300"/>
+                <line x1="0" y1="360" x2="480" y2="360"/>
+                <!-- Vertical streets -->
+                <line x1="80" y1="0" x2="80" y2="400"/>
+                <line x1="160" y1="0" x2="160" y2="400"/>
+                <line x1="240" y1="0" x2="240" y2="400"/>
+                <line x1="320" y1="0" x2="320" y2="400"/>
+                <line x1="400" y1="0" x2="400" y2="400"/>
+              </g>
+
+              <!-- Main road (Witte de Withstraat) - highlighted -->
+              <rect x="0" y="185" width="480" height="30" fill="rgba(212,150,14,0.08)" rx="0"/>
+              <line x1="0" y1="185" x2="480" y2="185" stroke="rgba(212,150,14,0.25)" stroke-width="1.5"/>
+              <line x1="0" y1="215" x2="480" y2="215" stroke="rgba(212,150,14,0.25)" stroke-width="1.5"/>
+
+              <!-- Street name -->
+              <text x="20" y="206" font-family="Manrope, sans-serif" font-size="7.5" fill="rgba(212,150,14,0.55)" letter-spacing="2" font-weight="500">WITTE DE WITHSTRAAT</text>
+
+              <!-- Cross street 1 -->
+              <rect x="130" y="0" width="22" height="400" fill="rgba(212,150,14,0.04)"/>
+              <line x1="130" y1="0" x2="130" y2="400" stroke="rgba(212,150,14,0.15)" stroke-width="1"/>
+              <line x1="152" y1="0" x2="152" y2="400" stroke="rgba(212,150,14,0.15)" stroke-width="1"/>
+
+              <!-- Cross street 2 -->
+              <rect x="310" y="0" width="22" height="400" fill="rgba(212,150,14,0.04)"/>
+              <line x1="310" y1="0" x2="310" y2="400" stroke="rgba(212,150,14,0.15)" stroke-width="1"/>
+              <line x1="332" y1="0" x2="332" y2="400" stroke="rgba(212,150,14,0.15)" stroke-width="1"/>
+
+              <!-- City blocks (solid rectangles) -->
+              <g fill="rgba(28,18,40,0.8)" stroke="rgba(212,150,14,0.1)" stroke-width="0.5">
+                <rect x="20" y="20" width="90" height="50" rx="2"/>
+                <rect x="170" y="20" width="120" height="50" rx="2"/>
+                <rect x="355" y="20" width="100" height="50" rx="2"/>
+                <rect x="20" y="100" width="90" height="65" rx="2"/>
+                <rect x="170" y="100" width="120" height="65" rx="2"/>
+                <rect x="355" y="100" width="100" height="65" rx="2"/>
+                <rect x="20" y="240" width="90" height="40" rx="2"/>
+                <rect x="170" y="240" width="120" height="40" rx="2"/>
+                <rect x="355" y="240" width="100" height="40" rx="2"/>
+                <rect x="20" y="310" width="90" height="60" rx="2"/>
+                <rect x="170" y="310" width="120" height="60" rx="2"/>
+                <rect x="355" y="310" width="100" height="60" rx="2"/>
+              </g>
+
+              <!-- Location pin -->
+              <g transform="translate(235, 175)" filter="url(#glow)">
+                <!-- Pin shadow -->
+                <ellipse cx="0" cy="35" rx="10" ry="4" fill="rgba(0,0,0,0.4)"/>
+                <!-- Pin body -->
+                <path d="M0,-30 C-14,-30 -22,-18 -22,-8 C-22,8 0,35 0,35 C0,35 22,8 22,-8 C22,-18 14,-30 0,-30 Z" fill="#c0634c"/>
+                <path d="M0,-30 C-14,-30 -22,-18 -22,-8 C-22,8 0,35 0,35 C0,35 22,8 22,-8 C22,-18 14,-30 0,-30 Z" fill="none" stroke="#f0b429" stroke-width="1.5"/>
+                <!-- Pin inner dot -->
+                <circle cx="0" cy="-8" r="7" fill="#120c1e"/>
+                <circle cx="0" cy="-8" r="4" fill="#f0b429"/>
+              </g>
+
+              <!-- Location label -->
+              <g transform="translate(240, 130)">
+                <rect x="-55" y="-18" width="110" height="22" rx="3" fill="rgba(18,12,30,0.9)" stroke="rgba(212,150,14,0.4)" stroke-width="1"/>
+                <text text-anchor="middle" y="-3" font-family="Manrope, sans-serif" font-size="8" fill="#f0b429" letter-spacing="1.5" font-weight="500">WARUNG SRIWEDARI</text>
+              </g>
+
+              <!-- Compass rose bottom right -->
+              <g transform="translate(440, 370)" opacity="0.35">
+                <line x1="0" y1="-15" x2="0" y2="15" stroke="#d4960e" stroke-width="1"/>
+                <line x1="-15" y1="0" x2="15" y2="0" stroke="#d4960e" stroke-width="1"/>
+                <polygon points="0,-15 -4,-6 4,-6" fill="#d4960e"/>
+                <text x="3" y="-17" font-family="Manrope, sans-serif" font-size="7" fill="#d4960e" font-weight="600">N</text>
+              </g>
+
+              <!-- Border -->
+              <rect x="1" y="1" width="478" height="398" fill="none" stroke="rgba(212,150,14,0.2)" stroke-width="1" rx="3"/>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#" class="footer-logo" aria-label="Warung Sriwedari — terug naar boven">Sriwedari</a>
+        <p class="footer-copy">
+          &copy; 2025 Warung Sriwedari · Witte de Withstraat 48, Rotterdam
+        </p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/warungsriwedari" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Volg ons op Instagram: @warungsriwedari">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/warungsriwedari" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Volg ons op Facebook: warungsriwedari">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ─── Nav scroll behavior ───
+    const nav = document.getElementById('siteNav');
+    const scrollThreshold = 60;
+    function handleNavScroll() {
+      if (window.scrollY > scrollThreshold) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
+    handleNavScroll();
+
+    // ─── Mobile menu ───
+    const hamburger = document.getElementById('navHamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+
+    function openMobile() {
+      mobileMenu.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', openMobile);
+    mobileClose.addEventListener('click', closeMobile);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobile();
+    });
+
+    // ─── Intersection Observer for .reveal ───
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+      const revealEls = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      revealEls.forEach(function(el) {
+        observer.observe(el);
+      });
+    } else {
+      // If prefers-reduced-motion, show all elements immediately
+      document.querySelectorAll('.reveal').forEach(function(el) {
+        el.classList.add('visible');
+      });
+    }
+
+    // ─── Hero elements visible on load (above fold) ───
+    document.querySelectorAll('.hero .reveal').forEach(function(el) {
+      setTimeout(function() {
+        el.classList.add('visible');
+      }, 100);
+    });
+  </script>
+
+</body>
+</html>

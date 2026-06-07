@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Razor & Co. — Premium Barbershop Den Haag</title>
+  <meta name="description" content="Razor & Co. is een premium barbershop op Frederikstraat 17 in Den Haag. Klassieke knippen, traditioneel natscheren en vakmanschap since 2011.">
+  <link rel="canonical" href="https://razorandco.nl/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://razorandco.nl/">
+  <meta property="og:title" content="Razor & Co. — Premium Barbershop Den Haag">
+  <meta property="og:description" content="Precisie is een kunst. Premium barbershop in Den Haag. Klassieke knippen, natscheren, fade & blend. Maak een afspraak.">
+  <meta property="og:locale" content="nl_NL">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Razor & Co. — Premium Barbershop Den Haag">
+  <meta name="twitter:description" content="Precisie is een kunst. Premium barbershop in Den Haag. Klassieke knippen, natscheren, fade & blend.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Razor & Co.",
+    "description": "Premium barbershop in Den Haag. Klassieke knippen, traditioneel natscheren en vakmanschap since 2011.",
+    "url": "https://razorandco.nl/",
+    "telephone": "+31703462219",
+    "email": "boek@razorandco.nl",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Frederikstraat 17",
+      "addressLocality": "Den Haag",
+      "postalCode": "2514 LK",
+      "addressCountry": "NL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "52.0800",
+      "longitude": "4.3100"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
+    "priceRange": "€€",
+    "sameAs": ["https://www.instagram.com/razorandco_denhaag/"],
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Credit Card",
+    "foundingDate": "2011"
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
+    :root {
+      --bg: #0c0e12;
+      --bg-2: #13161c;
+      --brass: #c49a2c;
+      --brass-light: #ddb84a;
+      --cream: #f0ebe0;
+      --cream-muted: #bdb5a6;
+      --muted: #6b6358;
+      --rule: rgba(240, 235, 224, 0.08);
+      --font-display: 'Bebas Neue', Impact, sans-serif;
+      --font-body: 'Work Sans', system-ui, sans-serif;
+      --max-w: 1280px;
+      --nav-h: 64px;
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY UTILITIES
+    ============================================================ */
+    .font-display {
+      font-family: var(--font-display);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 0.92;
+    }
+
+    .label-text {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+    }
+
+    /* ============================================================
+       REVEAL ANIMATIONS
+    ============================================================ */
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .reveal-d1 { transition-delay: 0.05s; }
+      .reveal-d2 { transition-delay: 0.1s; }
+      .reveal-d3 { transition-delay: 0.15s; }
+      .reveal-d4 { transition-delay: 0.2s; }
+      .reveal-d5 { transition-delay: 0.25s; }
+      .reveal-d6 { transition-delay: 0.3s; }
+      .reveal-d7 { transition-delay: 0.35s; }
+      .reveal-d8 { transition-delay: 0.4s; }
+    }
+
+    /* ============================================================
+       HORIZONTAL RULES
+    ============================================================ */
+    .hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      width: 100%;
+    }
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--bg);
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav__inner {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .nav__logo {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      color: var(--cream);
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav__right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav__phone {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--cream-muted);
+      white-space: nowrap;
+    }
+
+    .nav__phone a:hover {
+      color: var(--cream);
+    }
+
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      padding: 0 1.25rem;
+      border: 1px solid var(--brass);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      cursor: pointer;
+      background: transparent;
+      transition: background 0.2s, color 0.2s;
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    .btn-nav:hover {
+      background: var(--brass);
+      color: var(--bg);
+    }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 52px;
+      padding: 0 2rem;
+      background: var(--brass);
+      color: var(--bg);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 2px solid var(--brass);
+      transition: background 0.2s, color 0.2s;
+      min-height: 44px;
+    }
+
+    .btn-primary:hover {
+      background: var(--brass-light);
+      border-color: var(--brass-light);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 52px;
+      padding: 0 2rem;
+      background: transparent;
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1px solid rgba(240, 235, 224, 0.35);
+      transition: border-color 0.2s, color 0.2s;
+      min-height: 44px;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--cream);
+      color: var(--cream);
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      min-height: 100vh;
+      padding-top: var(--nav-h);
+      display: grid;
+      grid-template-columns: 60% 40%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem 3rem 5rem 2rem;
+      max-width: var(--max-w);
+      padding-left: calc((100vw - var(--max-w)) / 2 + 2rem);
+    }
+
+    @media (max-width: 1280px) {
+      .hero__left {
+        padding-left: 2rem;
+      }
+    }
+
+    .hero__label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero__label-line {
+      flex: 0 0 40px;
+      height: 1px;
+      background: var(--brass);
+      opacity: 0.5;
+    }
+
+    .hero__h1 {
+      margin-bottom: 2rem;
+    }
+
+    .hero__h1 .line {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(5rem, 12vw, 9rem);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .hero__h1 .line-1 {
+      color: var(--cream);
+    }
+
+    .hero__h1 .line-2 {
+      color: var(--brass);
+    }
+
+    .hero__h1 .line-3 {
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--cream);
+      text-stroke: 1.5px var(--cream);
+    }
+
+    .hero__address {
+      font-size: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: var(--cream-muted);
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+    }
+
+    .hero__ctas {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero__right {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Diagonal stripe pattern for right column */
+    .hero__right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 18px,
+        rgba(196, 154, 44, 0.03) 18px,
+        rgba(196, 154, 44, 0.03) 19px
+      );
+      pointer-events: none;
+    }
+
+    .hero__deco {
+      position: relative;
+      width: min(380px, 85%);
+      height: auto;
+    }
+
+    /* ============================================================
+       IDENTITY / STATS STRIP
+    ============================================================ */
+    .stats {
+      background: var(--bg-2);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 0;
+    }
+
+    .stats__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stats__item {
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .stats__item + .stats__item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 20%;
+      height: 60%;
+      width: 1px;
+      background: var(--brass);
+      opacity: 0.3;
+    }
+
+    .stats__number {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--brass);
+      line-height: 1;
+      display: block;
+      letter-spacing: 0.03em;
+    }
+
+    .stats__label {
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+      margin-top: 0.4rem;
+      display: block;
+    }
+
+    /* ============================================================
+       SECTION LAYOUT
+    ============================================================ */
+    .section {
+      padding: 6rem 2rem;
+    }
+
+    .section__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .section-label__mark {
+      color: var(--brass);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .section-label__text {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+    }
+
+    /* ============================================================
+       DIENSTEN (SERVICES) — BOARD LAYOUT
+    ============================================================ */
+    .diensten {
+      background: var(--bg);
+      padding: 6rem 2rem;
+    }
+
+    .diensten__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .diensten__header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .diensten__heading {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      color: var(--cream);
+      letter-spacing: 0.03em;
+    }
+
+    .diensten__intro {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--cream-muted);
+      line-height: 1.7;
+      max-width: 34ch;
+    }
+
+    .menu-board {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 4rem;
+    }
+
+    .menu-category {
+      margin-bottom: 3rem;
+    }
+
+    .menu-category__title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--brass);
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .menu-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      gap: 0.5rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+      transition: all 0.2s ease;
+      cursor: default;
+    }
+
+    .menu-row::before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      background: var(--brass);
+      transition: width 0.2s ease;
+    }
+
+    .menu-row:hover::before {
+      width: 3px;
+    }
+
+    .menu-row:hover {
+      padding-left: 0.75rem;
+    }
+
+    .menu-row__left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      min-width: 0;
+    }
+
+    .menu-row__name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+    }
+
+    .menu-row__desc {
+      font-size: 0.73rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .menu-row__price {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--brass);
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    /* ============================================================
+       TEAM
+    ============================================================ */
+    .team {
+      background: var(--bg-2);
+      padding: 6rem 2rem;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .team__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .team__heading {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      color: var(--cream);
+      letter-spacing: 0.03em;
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .team__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .team__member {
+      padding: 3rem 3rem 3rem 0;
+    }
+
+    .team__member + .team__member {
+      padding-left: 3rem;
+      padding-right: 0;
+      border-left: 1px solid var(--rule);
+    }
+
+    .team__member-number {
+      font-family: var(--font-display);
+      font-size: 5rem;
+      color: var(--brass);
+      opacity: 0.12;
+      line-height: 1;
+      margin-bottom: -1rem;
+      display: block;
+    }
+
+    .team__member-name {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .team__member-role {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 1.5rem;
+    }
+
+    .team__member-bio {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--cream-muted);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      max-width: 38ch;
+    }
+
+    .team__member-spec {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .team__member-spec-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      padding-top: 0.1rem;
+    }
+
+    .team__member-spec-value {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--cream-muted);
+    }
+
+    /* ============================================================
+       REVIEWS
+    ============================================================ */
+    .reviews {
+      background: var(--bg);
+      padding: 6rem 2rem;
+    }
+
+    .reviews__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .reviews__heading {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      color: var(--cream);
+      letter-spacing: 0.03em;
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .reviews__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .review {
+      padding: 2.5rem;
+      border: 1px solid var(--rule);
+      position: relative;
+      transition: border-color 0.2s;
+    }
+
+    .review:hover {
+      border-color: rgba(196, 154, 44, 0.2);
+    }
+
+    /* Remove double borders in the grid */
+    .review:nth-child(1) { border-bottom: none; border-right: none; }
+    .review:nth-child(2) { border-bottom: none; }
+    .review:nth-child(3) { border-right: none; }
+
+    .review__stars {
+      display: flex;
+      gap: 0.15rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .review__star {
+      color: var(--brass);
+      font-size: 0.8rem;
+    }
+
+    .review__star--empty {
+      color: var(--muted);
+    }
+
+    .review__text {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--cream-muted);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .review__text::before {
+      content: '\201C';
+      color: var(--brass);
+      font-size: 2rem;
+      line-height: 0;
+      vertical-align: -0.5rem;
+      margin-right: 0.1rem;
+      font-style: normal;
+    }
+
+    .review__author {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+
+    .review__author-name {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+    }
+
+    .review__author-loc {
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: var(--muted);
+    }
+
+    /* ============================================================
+       CONTACT / HOURS
+    ============================================================ */
+    .contact {
+      background: var(--bg-2);
+      padding: 6rem 2rem;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .contact__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .contact__heading {
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      color: var(--cream);
+      letter-spacing: 0.03em;
+      line-height: 0.9;
+      margin-bottom: 3rem;
+    }
+
+    .contact__detail {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .contact__item {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .contact__item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .contact__item-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brass);
+      min-width: 5rem;
+      padding-top: 0.1rem;
+    }
+
+    .contact__item-value {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--cream-muted);
+      line-height: 1.6;
+    }
+
+    .contact__item-value a {
+      color: var(--cream-muted);
+      transition: color 0.2s;
+    }
+
+    .contact__item-value a:hover {
+      color: var(--cream);
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.4rem 1.25rem;
+    }
+
+    .hours-grid .day {
+      font-weight: 400;
+      color: var(--cream);
+      font-size: 0.85rem;
+    }
+
+    .hours-grid .time {
+      color: var(--cream-muted);
+      font-size: 0.85rem;
+    }
+
+    .hours-grid .closed {
+      color: var(--muted);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: #070809;
+      border-top: 1px solid var(--rule);
+      padding: 2rem;
+    }
+
+    .footer__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer__main {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      color: var(--cream-muted);
+    }
+
+    .footer__right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer__copy {
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .footer__instagram {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brass);
+      transition: color 0.2s;
+    }
+
+    .footer__instagram:hover {
+      color: var(--brass-light);
+    }
+
+    /* ============================================================
+       RESPONSIVE — MOBILE
+    ============================================================ */
+    @media (max-width: 768px) {
+      :root {
+        --nav-h: 56px;
+      }
+
+      .nav__phone {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero__left {
+        padding: 3rem 1.5rem 2rem;
+        padding-left: 1.5rem;
+      }
+
+      .hero__right {
+        padding: 2rem 1.5rem 3rem;
+        min-height: 300px;
+      }
+
+      .hero__deco {
+        width: min(260px, 75%);
+      }
+
+      .stats__inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stats__item:nth-child(2)::before {
+        display: block;
+      }
+
+      .stats__item:nth-child(3)::before {
+        display: none;
+      }
+
+      .stats__item:nth-child(3) {
+        border-top: 1px solid var(--rule);
+      }
+
+      .stats__item:nth-child(4) {
+        border-top: 1px solid var(--rule);
+      }
+
+      .diensten__header {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .menu-board {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .team__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team__member {
+        padding: 2rem 0;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .team__member + .team__member {
+        padding-left: 0;
+        border-left: none;
+      }
+
+      .reviews__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .review:nth-child(1) { border: 1px solid var(--rule); border-bottom: none; }
+      .review:nth-child(2) { border: 1px solid var(--rule); border-bottom: none; }
+      .review:nth-child(3) { border: 1px solid var(--rule); border-bottom: none; }
+      .review:nth-child(4) { border: 1px solid var(--rule); }
+
+      .contact__inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .contact__heading {
+        margin-bottom: 2rem;
+      }
+
+      .footer__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .section {
+        padding: 4rem 1.5rem;
+      }
+
+      .nav__inner {
+        padding: 0 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero__h1 .line {
+        font-size: clamp(4rem, 16vw, 5rem);
+      }
+
+      .hero__ctas {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn-primary,
+      .btn-ghost {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .stats__inner {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 1rem;
+      }
+
+      .stats__item {
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" aria-label="Hoofdnavigatie">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Razor & Co. — Home">RAZOR &amp; CO.</a>
+      <div class="nav__right">
+        <span class="nav__phone">
+          <a href="tel:+31703462219">+31 70 346 22 19</a>
+        </span>
+        <a href="mailto:boek@razorandco.nl" class="btn-nav" aria-label="Maak een afspraak via e-mail">
+          AFSPRAAK MAKEN
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" aria-label="Welkom bij Razor &amp; Co.">
+
+    <div class="hero__left">
+      <div class="hero__label reveal">
+        <span class="hero__label-line" aria-hidden="true"></span>
+        <span class="label-text">Den Haag &middot; Est. 2011</span>
+        <span class="hero__label-line" aria-hidden="true"></span>
+      </div>
+
+      <h1 class="hero__h1 reveal reveal-d1">
+        <span class="line line-1">PRECISIE</span>
+        <span class="line line-2">IS EEN</span>
+        <span class="line line-3" aria-label="KUNST">KUNST</span>
+      </h1>
+
+      <p class="hero__address reveal reveal-d2">Frederikstraat 17, Den Haag</p>
+
+      <div class="hero__ctas reveal reveal-d3">
+        <a href="mailto:boek@razorandco.nl" class="btn-primary">AFSPRAAK MAKEN</a>
+        <a href="#diensten" class="btn-ghost">ONZE DIENSTEN</a>
+      </div>
+    </div>
+
+    <div class="hero__right" aria-hidden="true">
+      <!-- Decorative Geometric SVG — Razor & Co. Icon -->
+      <svg class="hero__deco" viewBox="0 0 380 460" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <!-- Large circle outline -->
+        <circle cx="190" cy="210" r="165" stroke="#c49a2c" stroke-width="0.75" opacity="0.4"/>
+        <!-- Inner circle -->
+        <circle cx="190" cy="210" r="120" stroke="#c49a2c" stroke-width="0.5" opacity="0.2"/>
+        <!-- Smallest circle -->
+        <circle cx="190" cy="210" r="60" stroke="#c49a2c" stroke-width="0.5" opacity="0.15"/>
+
+        <!-- Horizontal and vertical axis lines through center -->
+        <line x1="25" y1="210" x2="355" y2="210" stroke="#c49a2c" stroke-width="0.5" opacity="0.2"/>
+        <line x1="190" y1="45" x2="190" y2="375" stroke="#c49a2c" stroke-width="0.5" opacity="0.2"/>
+
+        <!-- Diagonal axis lines -->
+        <line x1="74" y1="94" x2="306" y2="326" stroke="#c49a2c" stroke-width="0.5" opacity="0.12"/>
+        <line x1="306" y1="94" x2="74" y2="326" stroke="#c49a2c" stroke-width="0.5" opacity="0.12"/>
+
+        <!-- Stylized straight razor — blade pointing down-right -->
+        <!-- Razor handle -->
+        <rect x="80" y="140" width="80" height="18" rx="2" fill="none" stroke="#c49a2c" stroke-width="1.2" opacity="0.55" transform="rotate(35 120 149)"/>
+        <!-- Pivot pin -->
+        <circle cx="156" cy="179" r="3.5" fill="none" stroke="#c49a2c" stroke-width="1" opacity="0.6"/>
+        <!-- Blade -->
+        <path d="M156 179 L270 255 L260 270 L148 193 Z" fill="none" stroke="#c49a2c" stroke-width="1" opacity="0.5"/>
+        <!-- Blade edge highlight -->
+        <line x1="156" y1="179" x2="268" y2="258" stroke="#c49a2c" stroke-width="0.5" opacity="0.35"/>
+        <!-- Spine of blade -->
+        <line x1="156" y1="179" x2="262" y2="267" stroke="#c49a2c" stroke-width="0.5" opacity="0.3"/>
+        <!-- Blade tip detail -->
+        <line x1="260" y1="270" x2="266" y2="258" stroke="#c49a2c" stroke-width="1" opacity="0.5"/>
+
+        <!-- Scissors suggestion — upper -->
+        <path d="M220 130 Q240 150 260 140 Q250 160 230 165 Q215 150 220 130Z" fill="none" stroke="#c49a2c" stroke-width="0.8" opacity="0.3"/>
+        <path d="M220 130 L270 175" stroke="#c49a2c" stroke-width="0.8" opacity="0.3"/>
+
+        <!-- Corner crosshair marks -->
+        <!-- Top-left -->
+        <line x1="30" y1="44" x2="42" y2="44" stroke="#c49a2c" stroke-width="0.8" opacity="0.5"/>
+        <line x1="36" y1="38" x2="36" y2="50" stroke="#c49a2c" stroke-width="0.8" opacity="0.5"/>
+        <!-- Top-right -->
+        <line x1="338" y1="44" x2="350" y2="44" stroke="#c49a2c" stroke-width="0.8" opacity="0.5"/>
+        <line x1="344" y1="38" x2="344" y2="50" stroke="#c49a2c" stroke-width="0.8" opacity="0.5"/>
+        <!-- Bottom-left -->
+        <line x1="30" y1="374" x2="42" y2="374" stroke="#c49a2c" stroke-width="0.8" opacity="0.5"/>
+        <line x1="36" y1="368" x2="36" y2="380" stroke="#c49a2c" stroke-width="0.8" opacity="0.5"/>
+        <!-- Bottom-right -->
+        <line x1="338" y1="374" x2="350" y2="374" stroke="#c49a2c" stroke-width="0.8" opacity="0.5"/>
+        <line x1="344" y1="368" x2="344" y2="380" stroke="#c49a2c" stroke-width="0.8" opacity="0.5"/>
+
+        <!-- Centre dot -->
+        <circle cx="190" cy="210" r="2.5" fill="#c49a2c" opacity="0.6"/>
+
+        <!-- Diagonal ruled lines — decorative -->
+        <line x1="30" y1="60" x2="90" y2="60" stroke="#c49a2c" stroke-width="0.4" opacity="0.15"/>
+        <line x1="30" y1="68" x2="75" y2="68" stroke="#c49a2c" stroke-width="0.4" opacity="0.15"/>
+        <line x1="30" y1="76" x2="55" y2="76" stroke="#c49a2c" stroke-width="0.4" opacity="0.15"/>
+
+        <line x1="290" y1="340" x2="350" y2="340" stroke="#c49a2c" stroke-width="0.4" opacity="0.15"/>
+        <line x1="305" y1="348" x2="350" y2="348" stroke="#c49a2c" stroke-width="0.4" opacity="0.15"/>
+        <line x1="325" y1="356" x2="350" y2="356" stroke="#c49a2c" stroke-width="0.4" opacity="0.15"/>
+
+        <!-- Small label text in SVG -->
+        <text x="190" y="408" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="11" fill="#c49a2c" opacity="0.35" letter-spacing="4">RAZOR &amp; CO.</text>
+        <text x="190" y="422" text-anchor="middle" font-family="'Work Sans', sans-serif" font-size="7" fill="#c49a2c" opacity="0.25" letter-spacing="3">EST. 2011 · DEN HAAG</text>
+      </svg>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       STATS STRIP
+  ============================================================ -->
+  <section class="stats" aria-label="Razor &amp; Co. in cijfers">
+    <div class="stats__inner">
+      <div class="stats__item reveal">
+        <span class="stats__number" data-target="14">0</span>
+        <span class="stats__label">Jaar ervaring</span>
+      </div>
+      <div class="stats__item reveal reveal-d1">
+        <span class="stats__number" data-target="3">0</span>
+        <span class="stats__label">Barbiers</span>
+      </div>
+      <div class="stats__item reveal reveal-d2">
+        <span class="stats__number" data-target="500">0</span>
+        <span class="stats__label">Klanten</span>
+      </div>
+      <div class="stats__item reveal reveal-d3">
+        <span class="stats__number" data-target="100">0</span>
+        <span class="stats__label">% Ambacht</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DIENSTEN (SERVICES)
+  ============================================================ -->
+  <section class="diensten" id="diensten" aria-labelledby="diensten-heading">
+    <div class="diensten__inner">
+
+      <div class="diensten__header">
+        <div>
+          <div class="section-label reveal">
+            <span class="section-label__mark" aria-hidden="true">&times;</span>
+            <span class="section-label__text">Onze diensten</span>
+          </div>
+          <h2 id="diensten-heading" class="diensten__heading reveal reveal-d1">ONS MENU</h2>
+        </div>
+        <p class="diensten__intro reveal reveal-d2">
+          Vakmanschap zonder compromis. Elk dienst is uitgevoerd met de precisie en aandacht die uw tijd verdient.
+        </p>
+      </div>
+
+      <div class="menu-board">
+
+        <!-- KNIPPEN -->
+        <div class="menu-category">
+          <h3 class="menu-category__title reveal">KNIPPEN</h3>
+
+          <div class="menu-row reveal reveal-d1">
+            <div class="menu-row__left">
+              <span class="menu-row__name">Klassieke knip</span>
+              <span class="menu-row__desc">haren wassen, knippen, stylen</span>
+            </div>
+            <span class="menu-row__price">&euro;25</span>
+          </div>
+
+          <div class="menu-row reveal reveal-d2">
+            <div class="menu-row__left">
+              <span class="menu-row__name">Fade &amp; Blend</span>
+              <span class="menu-row__desc">skin fade, textuur, definitie</span>
+            </div>
+            <span class="menu-row__price">&euro;30</span>
+          </div>
+
+          <div class="menu-row reveal reveal-d3">
+            <div class="menu-row__left">
+              <span class="menu-row__name">Kinderknip</span>
+              <span class="menu-row__desc">t/m 12 jaar</span>
+            </div>
+            <span class="menu-row__price">&euro;18</span>
+          </div>
+
+          <div class="menu-row reveal reveal-d4">
+            <div class="menu-row__left">
+              <span class="menu-row__name">Crew Cut</span>
+              <span class="menu-row__desc">militaire precisie, scherpe lijn</span>
+            </div>
+            <span class="menu-row__price">&euro;22</span>
+          </div>
+        </div>
+
+        <!-- SCHEREN -->
+        <div class="menu-category">
+          <h3 class="menu-category__title reveal">SCHEREN</h3>
+
+          <div class="menu-row reveal reveal-d1">
+            <div class="menu-row__left">
+              <span class="menu-row__name">Traditioneel natscheren</span>
+              <span class="menu-row__desc">warm doek, scheermes, aftershave ritual</span>
+            </div>
+            <span class="menu-row__price">&euro;28</span>
+          </div>
+
+          <div class="menu-row reveal reveal-d2">
+            <div class="menu-row__left">
+              <span class="menu-row__name">Baard bijwerken</span>
+              <span class="menu-row__desc">contouren, lijn, was</span>
+            </div>
+            <span class="menu-row__price">&euro;20</span>
+          </div>
+
+          <div class="menu-row reveal reveal-d3">
+            <div class="menu-row__left">
+              <span class="menu-row__name">Baard &amp; knip combinatie</span>
+              <span class="menu-row__desc">het complete pakket</span>
+            </div>
+            <span class="menu-row__price">&euro;48</span>
+          </div>
+
+          <div class="menu-row reveal reveal-d4">
+            <div class="menu-row__left">
+              <span class="menu-row__name">Hot Towel Treatment</span>
+              <span class="menu-row__desc">ontspannend ritueel</span>
+            </div>
+            <span class="menu-row__price">&euro;35</span>
+          </div>
+        </div>
+
+        <!-- FINISHING -->
+        <div class="menu-category" style="margin-bottom: 0;">
+          <h3 class="menu-category__title reveal">FINISHING</h3>
+
+          <div class="menu-row reveal reveal-d1">
+            <div class="menu-row__left">
+              <span class="menu-row__name">Waxing</span>
+              <span class="menu-row__desc">neus / oor / wenkbrauw — per zone</span>
+            </div>
+            <span class="menu-row__price">&euro;12</span>
+          </div>
+
+          <div class="menu-row reveal reveal-d2">
+            <div class="menu-row__left">
+              <span class="menu-row__name">Hoofdmassage</span>
+              <span class="menu-row__desc">10 minuten</span>
+            </div>
+            <span class="menu-row__price">&euro;15</span>
+          </div>
+        </div>
+
+      </div><!-- /menu-board -->
+    </div><!-- /inner -->
+  </section>
+
+  <!-- ============================================================
+       TEAM
+  ============================================================ -->
+  <section class="team" id="team" aria-labelledby="team-heading">
+    <div class="team__inner">
+
+      <div class="section-label reveal">
+        <span class="section-label__mark" aria-hidden="true">&times;</span>
+        <span class="section-label__text">Het team</span>
+      </div>
+
+      <h2 id="team-heading" class="team__heading reveal reveal-d1">DE BARBIERS</h2>
+
+      <div class="team__grid">
+
+        <article class="team__member reveal">
+          <span class="team__member-number" aria-hidden="true">01</span>
+          <h3 class="team__member-name">KHALID OSMAN</h3>
+          <p class="team__member-role">Head Barber</p>
+          <p class="team__member-bio">
+            Opgeleid in Londen, teruggekeerd naar Den Haag met een obsessie voor de perfecte fade. Khalid combineert internationale techniek met een persoonlijke aanpak.
+          </p>
+          <div class="team__member-spec">
+            <span class="team__member-spec-label">Specialiteit</span>
+            <span class="team__member-spec-value">Skin fades, baard sculptuur</span>
+          </div>
+        </article>
+
+        <article class="team__member reveal reveal-d2">
+          <span class="team__member-number" aria-hidden="true">02</span>
+          <h3 class="team__member-name">JOOST VAN DER PLAS</h3>
+          <p class="team__member-role">Senior Barber</p>
+          <p class="team__member-bio">
+            Klassieke barbertechnieken gecombineerd met hedendaagse precisie. 9 jaar bij Razor &amp; Co. — Joost weet wat consistentie betekent.
+          </p>
+          <div class="team__member-spec">
+            <span class="team__member-spec-label">Specialiteit</span>
+            <span class="team__member-spec-value">Natscheren, klassieke stijlen</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       REVIEWS
+  ============================================================ -->
+  <section class="reviews" id="reviews" aria-labelledby="reviews-heading">
+    <div class="reviews__inner">
+
+      <div class="section-label reveal">
+        <span class="section-label__mark" aria-hidden="true">&times;</span>
+        <span class="section-label__text">Wat klanten zeggen</span>
+      </div>
+
+      <h2 id="reviews-heading" class="reviews__heading reveal reveal-d1">RECENSIES</h2>
+
+      <div class="reviews__grid">
+
+        <article class="review reveal">
+          <div class="review__stars" aria-label="5 van 5 sterren">
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+          </div>
+          <blockquote class="review__text">
+            Beste fade in de stad, geen discussie. Khalid heeft er een gave voor om precies te doen wat je wil, zonder dat je het hoeft uit te leggen.
+          </blockquote>
+          <div class="review__author">
+            <span class="review__author-name">Marcus Hendrikx</span>
+            <span class="review__author-loc">Den Haag</span>
+          </div>
+        </article>
+
+        <article class="review reveal reveal-d1">
+          <div class="review__stars" aria-label="5 van 5 sterren">
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+          </div>
+          <blockquote class="review__text">
+            Het scheerritueel met warm doek is absoluut de beste 28 euro die ik maandelijks uitgeef. Voelt als een andere wereld.
+          </blockquote>
+          <div class="review__author">
+            <span class="review__author-name">Luca de Bruin</span>
+            <span class="review__author-loc">Rijswijk</span>
+          </div>
+        </article>
+
+        <article class="review reveal reveal-d2">
+          <div class="review__stars" aria-label="5 van 5 sterren">
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+          </div>
+          <blockquote class="review__text">
+            Elke maand terug. Ze kennen je naam, je stijl, en hoeven niet elke keer dezelfde vragen te stellen. Zo hoort het.
+          </blockquote>
+          <div class="review__author">
+            <span class="review__author-name">Reza Ahmadi</span>
+            <span class="review__author-loc">Den Haag</span>
+          </div>
+        </article>
+
+        <article class="review reveal reveal-d3">
+          <div class="review__stars" aria-label="4 van 5 sterren">
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star" aria-hidden="true">&#9733;</span>
+            <span class="review__star review__star--empty" aria-hidden="true">&#9733;</span>
+          </div>
+          <blockquote class="review__text">
+            Kom speciaal vanuit Wassenaar. Joost levert consistentie &mdash; mijn kapsel ziet er zes weken later nog steeds goed uit.
+          </blockquote>
+          <div class="review__author">
+            <span class="review__author-name">Thomas Bakker</span>
+            <span class="review__author-loc">Wassenaar</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT / HOURS
+  ============================================================ -->
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="contact__inner">
+
+      <div>
+        <div class="section-label reveal">
+          <span class="section-label__mark" aria-hidden="true">&times;</span>
+          <span class="section-label__text">Bezoek ons</span>
+        </div>
+
+        <h2 id="contact-heading" class="contact__heading reveal reveal-d1">
+          BEZOEK<br>ONS
+        </h2>
+
+        <div class="contact__detail">
+
+          <div class="contact__item reveal reveal-d2">
+            <span class="contact__item-label">Adres</span>
+            <span class="contact__item-value">
+              Frederikstraat 17<br>
+              2514 LK Den Haag<br>
+              Nederland
+            </span>
+          </div>
+
+          <div class="contact__item reveal reveal-d3">
+            <span class="contact__item-label">Telefoon</span>
+            <span class="contact__item-value">
+              <a href="tel:+31703462219">+31 70 346 22 19</a>
+            </span>
+          </div>
+
+          <div class="contact__item reveal reveal-d4">
+            <span class="contact__item-label">E-mail</span>
+            <span class="contact__item-value">
+              <a href="mailto:boek@razorandco.nl">boek@razorandco.nl</a>
+            </span>
+          </div>
+
+          <div class="contact__item reveal reveal-d5">
+            <span class="contact__item-label">Openings&shy;tijden</span>
+            <div class="contact__item-value">
+              <div class="hours-grid">
+                <span class="day">Maandag</span>
+                <span class="time closed">Gesloten</span>
+                <span class="day">Di &ndash; Vr</span>
+                <span class="time">09:00 &ndash; 18:00</span>
+                <span class="day">Zaterdag</span>
+                <span class="time">08:00 &ndash; 17:00</span>
+                <span class="day">Zondag</span>
+                <span class="time closed">Gesloten</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /detail -->
+      </div>
+
+      <!-- Decorative SVG — Abstract grid with location marker -->
+      <div aria-hidden="true">
+        <svg viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:380px;margin:0 auto;" aria-hidden="true" focusable="false">
+          <!-- Grid background -->
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#c49a2c" stroke-width="0.4" opacity="0.12"/>
+            </pattern>
+          </defs>
+          <rect width="400" height="480" fill="url(#grid)"/>
+
+          <!-- Map-like abstract streets -->
+          <!-- Main horizontal road -->
+          <rect x="60" y="210" width="280" height="8" fill="none" stroke="#c49a2c" stroke-width="1.2" opacity="0.3"/>
+          <!-- Main vertical road -->
+          <rect x="186" y="80" width="8" height="280" fill="none" stroke="#c49a2c" stroke-width="1.2" opacity="0.3"/>
+          <!-- Secondary road top-left -->
+          <rect x="60" y="140" width="130" height="5" fill="none" stroke="#c49a2c" stroke-width="0.8" opacity="0.18"/>
+          <!-- Secondary road bottom -->
+          <rect x="120" y="280" width="200" height="5" fill="none" stroke="#c49a2c" stroke-width="0.8" opacity="0.18"/>
+          <!-- Secondary vertical left -->
+          <rect x="100" y="140" width="5" height="150" fill="none" stroke="#c49a2c" stroke-width="0.8" opacity="0.18"/>
+          <!-- Secondary vertical right -->
+          <rect x="290" y="140" width="5" height="145" fill="none" stroke="#c49a2c" stroke-width="0.8" opacity="0.18"/>
+
+          <!-- City blocks -->
+          <rect x="106" y="148" width="78" height="60" fill="#c49a2c" opacity="0.04" stroke="#c49a2c" stroke-width="0.4" opacity="0.12"/>
+          <rect x="200" y="148" width="88" height="60" fill="#c49a2c" opacity="0.04" stroke="#c49a2c" stroke-width="0.4" opacity="0.12"/>
+          <rect x="106" y="220" width="78" height="58" fill="#c49a2c" opacity="0.04" stroke="#c49a2c" stroke-width="0.4" opacity="0.12"/>
+          <rect x="200" y="220" width="88" height="58" fill="#c49a2c" opacity="0.04" stroke="#c49a2c" stroke-width="0.4" opacity="0.12"/>
+
+          <!-- Our building — highlighted -->
+          <rect x="147" y="177" width="38" height="30" fill="#c49a2c" opacity="0.18" stroke="#c49a2c" stroke-width="1.5" opacity="0.7"/>
+
+          <!-- Location pin -->
+          <circle cx="166" cy="192" r="20" fill="none" stroke="#c49a2c" stroke-width="1.5" opacity="0.8"/>
+          <circle cx="166" cy="192" r="5" fill="#c49a2c" opacity="0.9"/>
+          <!-- Pin drop line -->
+          <line x1="166" y1="212" x2="166" y2="240" stroke="#c49a2c" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="166" cy="243" r="2" fill="#c49a2c" opacity="0.5"/>
+
+          <!-- Compass rose — top right -->
+          <g transform="translate(320, 100)">
+            <line x1="0" y1="-28" x2="0" y2="28" stroke="#c49a2c" stroke-width="0.8" opacity="0.4"/>
+            <line x1="-28" y1="0" x2="28" y2="0" stroke="#c49a2c" stroke-width="0.8" opacity="0.4"/>
+            <line x1="-20" y1="-20" x2="20" y2="20" stroke="#c49a2c" stroke-width="0.5" opacity="0.2"/>
+            <line x1="20" y1="-20" x2="-20" y2="20" stroke="#c49a2c" stroke-width="0.5" opacity="0.2"/>
+            <circle cx="0" cy="0" r="4" fill="none" stroke="#c49a2c" stroke-width="0.8" opacity="0.5"/>
+            <polygon points="0,-28 -4,-10 4,-10" fill="#c49a2c" opacity="0.6"/>
+            <text y="-33" text-anchor="middle" font-family="'Work Sans', sans-serif" font-size="8" fill="#c49a2c" opacity="0.5" letter-spacing="1">N</text>
+          </g>
+
+          <!-- Scale bar -->
+          <line x1="60" y1="420" x2="160" y2="420" stroke="#c49a2c" stroke-width="1" opacity="0.3"/>
+          <line x1="60" y1="416" x2="60" y2="424" stroke="#c49a2c" stroke-width="1" opacity="0.3"/>
+          <line x1="160" y1="416" x2="160" y2="424" stroke="#c49a2c" stroke-width="1" opacity="0.3"/>
+          <text x="110" y="436" text-anchor="middle" font-family="'Work Sans', sans-serif" font-size="8" fill="#c49a2c" opacity="0.3" letter-spacing="2">100M</text>
+
+          <!-- Label -->
+          <text x="200" y="400" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="13" fill="#c49a2c" opacity="0.4" letter-spacing="4">FREDERIKSTRAAT 17</text>
+          <text x="200" y="414" text-anchor="middle" font-family="'Work Sans', sans-serif" font-size="8" fill="#c49a2c" opacity="0.25" letter-spacing="3">2514 LK DEN HAAG</text>
+
+          <!-- Corner marks -->
+          <line x1="20" y1="20" x2="36" y2="20" stroke="#c49a2c" stroke-width="0.8" opacity="0.4"/>
+          <line x1="20" y1="20" x2="20" y2="36" stroke="#c49a2c" stroke-width="0.8" opacity="0.4"/>
+          <line x1="380" y1="20" x2="364" y2="20" stroke="#c49a2c" stroke-width="0.8" opacity="0.4"/>
+          <line x1="380" y1="20" x2="380" y2="36" stroke="#c49a2c" stroke-width="0.8" opacity="0.4"/>
+          <line x1="20" y1="460" x2="36" y2="460" stroke="#c49a2c" stroke-width="0.8" opacity="0.4"/>
+          <line x1="20" y1="460" x2="20" y2="444" stroke="#c49a2c" stroke-width="0.8" opacity="0.4"/>
+          <line x1="380" y1="460" x2="364" y2="460" stroke="#c49a2c" stroke-width="0.8" opacity="0.4"/>
+          <line x1="380" y1="460" x2="380" y2="444" stroke="#c49a2c" stroke-width="0.8" opacity="0.4"/>
+        </svg>
+      </div>
+
+    </div><!-- /inner -->
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer__inner">
+      <span class="footer__main">RAZOR &amp; CO. &mdash; FREDERIKSTRAAT 17, 2514 LK DEN HAAG</span>
+      <div class="footer__right">
+        <span class="footer__copy">&copy; 2026 Razor &amp; Co. Alle rechten voorbehouden.</span>
+        <a
+          href="https://www.instagram.com/razorandco_denhaag/"
+          class="footer__instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Volg Razor &amp; Co. op Instagram (@razorandco_denhaag)"
+        >
+          @razorandco_denhaag
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT — Intersection Observer + Count-up
+  ============================================================ -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Respect reduced motion preference
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // ---- Reveal on scroll ----
+      var reveals = document.querySelectorAll('.reveal');
+
+      if (prefersReduced) {
+        // Show everything immediately
+        reveals.forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+      } else {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          rootMargin: '0px 0px -60px 0px',
+          threshold: 0.1
+        });
+
+        reveals.forEach(function (el) {
+          observer.observe(el);
+        });
+      }
+
+      // ---- Count-up animation for stats ----
+      var counters = document.querySelectorAll('.stats__number[data-target]');
+      var hasAnimated = false;
+
+      function easeOut(t) {
+        return 1 - Math.pow(1 - t, 3);
+      }
+
+      function animateCounters() {
+        if (hasAnimated) return;
+        hasAnimated = true;
+
+        counters.forEach(function (counter) {
+          var target = parseInt(counter.getAttribute('data-target'), 10);
+          var duration = prefersReduced ? 0 : 1200;
+          var start = null;
+          var suffix = counter.parentElement.querySelector('.stats__label').textContent.indexOf('%') > -1 ? '%' : '+';
+
+          // For the "100%" stat, show % sign; for others show +
+          var labelText = counter.parentElement.querySelector('.stats__label').textContent;
+          var isPercent = labelText.indexOf('%') > -1;
+          suffix = '+';
+
+          function step(timestamp) {
+            if (!start) start = timestamp;
+            var elapsed = timestamp - start;
+            var progress = Math.min(elapsed / duration, 1);
+            var current = Math.floor(easeOut(progress) * target);
+            counter.textContent = current + (isPercent ? '%' : '+');
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              counter.textContent = target + (isPercent ? '%' : '+');
+            }
+          }
+
+          if (duration === 0) {
+            counter.textContent = target + (isPercent ? '%' : '+');
+          } else {
+            requestAnimationFrame(step);
+          }
+        });
+      }
+
+      // Fix the label check before animation runs
+      counters.forEach(function(counter) {
+        var labelText = counter.parentElement.querySelector('.stats__label').textContent;
+        if (labelText.indexOf('%') > -1) {
+          counter.setAttribute('data-is-percent', '1');
+        }
+      });
+
+      var statsSection = document.querySelector('.stats');
+      if (statsSection) {
+        var statsObserver = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting) {
+            animateCounters();
+            statsObserver.disconnect();
+          }
+        }, { threshold: 0.3 });
+        statsObserver.observe(statsSection);
+      }
+
+    })();
+  </script>
+
+</body>
+</html>
