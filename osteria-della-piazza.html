@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Osteria della Piazza — Authentieke Italiaanse Osteria in Delft</title>
+  <meta name="description" content="Osteria della Piazza in Delft. Cucina italiana zoals het thuishoort — simpel, eerlijk, seizoensgebonden. Aan de Voldersgracht, geopend wo–zo." />
+  <link rel="canonical" href="https://osteriadellapiazza.nl/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Osteria della Piazza — Authentieke Italiaanse Osteria in Delft" />
+  <meta property="og:description" content="Cucina italiana zoals het thuishoort — simpel, eerlijk, seizoensgebonden. Voldersgracht 3, Delft." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:url" content="https://osteriadellapiazza.nl/" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Osteria della Piazza",
+    "description": "Authentieke Italiaanse Osteria in Delft. Cucina italiana zoals het thuishoort — simpel, eerlijk, seizoensgebonden.",
+    "url": "https://osteriadellapiazza.nl/",
+    "telephone": "+31152157833",
+    "email": "reserveer@osteriadellapiazza.nl",
+    "servesCuisine": "Italian",
+    "priceRange": "€€€",
+    "currenciesAccepted": "EUR",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Voldersgracht 3",
+      "addressLocality": "Delft",
+      "postalCode": "2611 EL",
+      "addressCountry": "NL"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Wednesday","Thursday"],
+        "opens": "12:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday","Saturday"],
+        "opens": "12:00",
+        "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "12:00",
+        "closes": "21:30"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "187"
+    },
+    "sameAs": [
+      "https://www.instagram.com/osteriadellapiazza",
+      "https://www.facebook.com/osteriadellapiazza.delft"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ============================
+       CSS CUSTOM PROPERTIES
+    ============================ */
+    :root {
+      --bg: #faf7f0;
+      --bg-alt: #f2ede3;
+      --text: #2a1f12;
+      --text-muted: #7a6a56;
+      --sage: #7a9e7e;
+      --sage-dark: #4a6e4e;
+      --sand: #c4a47a;
+      --rule: rgba(42, 31, 18, 0.1);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Nunito Sans', system-ui, sans-serif;
+      --nav-height: 72px;
+    }
+
+    /* ============================
+       RESET & BASE
+    ============================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ============================
+       NAVIGATION
+    ============================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      background-color: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 clamp(1.5rem, 4vw, 3.5rem);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .nav.scrolled {
+      box-shadow: 0 2px 24px rgba(42, 31, 18, 0.06);
+    }
+
+    .nav-brand {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: var(--text);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--sage);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      text-align: right;
+    }
+
+    .nav-cta a {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text);
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-cta a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--text);
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-cta a:hover::after {
+      background-color: var(--sage);
+    }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--text);
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background-color: var(--text);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 1.5px;
+      background-color: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    .nav-toggle span::before { top: -7px; }
+    .nav-toggle span::after { bottom: -7px; }
+
+    .nav-toggle.open span { background-color: transparent; }
+    .nav-toggle.open span::before { transform: rotate(45deg); top: 0; }
+    .nav-toggle.open span::after { transform: rotate(-45deg); bottom: 0; }
+
+    /* Mobile nav */
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      background-color: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 1.5rem clamp(1.5rem, 4vw, 3.5rem) 2rem;
+      z-index: 99;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nav-mobile.open {
+      display: flex;
+    }
+
+    .nav-mobile a {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-mobile a:last-child {
+      border-bottom: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ============================
+       HERO
+    ============================ */
+    .hero {
+      min-height: 100vh;
+      padding-top: var(--nav-height);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-upper {
+      padding: clamp(4rem, 8vh, 7rem) clamp(1.5rem, 6vw, 6rem) clamp(2rem, 4vh, 4rem);
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-location {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      margin-bottom: 1.2rem;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.8s ease 0.1s forwards;
+    }
+
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(4rem, 9vw, 8rem);
+      line-height: 0.95;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .hero-word {
+      display: block;
+      overflow: hidden;
+    }
+
+    .hero-word-inner {
+      display: block;
+      transform: translateY(110%);
+      opacity: 0;
+    }
+
+    .hero-word-inner.animate {
+      animation: wordReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .hero-word-inner:nth-child(1) { animation-delay: 0.2s; }
+
+    .hero-word--sage .hero-word-inner {
+      color: var(--sage);
+      padding-left: clamp(1rem, 3vw, 3rem);
+    }
+
+    .hero-word--piazza {
+      position: relative;
+    }
+
+    .hero-rule {
+      display: block;
+      width: clamp(80px, 18vw, 180px);
+      height: 1px;
+      background: linear-gradient(to right, var(--sand), transparent);
+      margin-top: 1.2rem;
+      opacity: 0;
+      animation: fadeIn 1s ease 1.2s forwards;
+    }
+
+    .hero-watermark {
+      position: absolute;
+      right: clamp(1rem, 6vw, 5rem);
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.09;
+      pointer-events: none;
+      width: clamp(180px, 28vw, 320px);
+    }
+
+    .hero-lower {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--rule);
+    }
+
+    .hero-lower-left {
+      padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 6vw, 6rem);
+      border-right: 1px solid var(--rule);
+    }
+
+    .hero-tagline {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1rem, 1.8vw, 1.35rem);
+      color: var(--text);
+      line-height: 1.5;
+      max-width: 42ch;
+    }
+
+    .hero-lower-right {
+      padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .hero-hours {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      line-height: 1.9;
+    }
+
+    .hero-hours strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .hero-cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      min-height: 44px;
+    }
+
+    .hero-cta-link svg {
+      transition: transform 0.3s ease;
+    }
+
+    .hero-cta-link:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* ============================
+       SECTION LABELS
+    ============================ */
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section-label::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background-color: var(--sand);
+    }
+
+    /* ============================
+       LA STORIA
+    ============================ */
+    .storia {
+      padding: clamp(5rem, 10vh, 9rem) clamp(1.5rem, 6vw, 6rem);
+    }
+
+    .storia-inner {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: center;
+      max-width: 1200px;
+    }
+
+    .storia-text {}
+
+    .storia-h2 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.05;
+      color: var(--text);
+      margin-bottom: 1.8rem;
+    }
+
+    .storia-h2 em {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .storia-p {
+      font-family: var(--font-body);
+      font-size: clamp(0.92rem, 1.4vw, 1.05rem);
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.85;
+      max-width: 54ch;
+      margin-bottom: 1.4rem;
+    }
+
+    .storia-p:last-child {
+      margin-bottom: 0;
+      color: var(--text-muted);
+      font-style: italic;
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
+    }
+
+    .storia-illustration {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.55;
+    }
+
+    /* ============================
+       IL MENÙ
+    ============================ */
+    .menu {
+      background-color: var(--bg-alt);
+      padding: clamp(5rem, 10vh, 9rem) clamp(1.5rem, 6vw, 6rem);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .menu-header {
+      margin-bottom: clamp(3rem, 6vh, 5rem);
+    }
+
+    .menu-h2 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.05;
+      color: var(--text);
+    }
+
+    .menu-subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem, 5vw, 5rem) clamp(3rem, 7vw, 7rem);
+      max-width: 1100px;
+    }
+
+    .menu-category {
+      margin-bottom: 0;
+    }
+
+    .menu-category-name {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+      color: var(--text);
+      margin-bottom: 0.3rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .menu-category-sub {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      display: block;
+      padding-top: 0.3rem;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--rule);
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .menu-item.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+
+    .menu-item-left {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .menu-item-name {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+      color: var(--text);
+      display: block;
+    }
+
+    .menu-item-desc {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 0.15rem;
+      line-height: 1.5;
+    }
+
+    .menu-item-dots {
+      flex: 1;
+      border-bottom: 1px dotted rgba(42,31,18,0.2);
+      margin: 0 0.5rem;
+      min-width: 16px;
+      align-self: flex-end;
+      margin-bottom: 6px;
+    }
+
+    .menu-item-price {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(0.9rem, 1.3vw, 1rem);
+      color: var(--sage-dark);
+      white-space: nowrap;
+      flex-shrink: 0;
+      align-self: flex-end;
+    }
+
+    /* ============================
+       LE RECENSIONI
+    ============================ */
+    .recensioni {
+      padding: clamp(5rem, 10vh, 9rem) clamp(1.5rem, 6vw, 6rem);
+    }
+
+    .recensioni-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: clamp(3rem, 6vh, 5rem);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .recensioni-h2 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.05;
+    }
+
+    .recensioni-rating {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .recensioni-rating strong {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--text);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 4vw, 4rem) clamp(3rem, 6vw, 6rem);
+    }
+
+    .review {
+      position: relative;
+    }
+
+    .review-quote {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 7vw, 6rem);
+      line-height: 0.7;
+      color: var(--sand);
+      opacity: 0.7;
+      margin-bottom: 0.5rem;
+      display: block;
+      font-weight: 300;
+    }
+
+    .review-text {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+
+    .review-attribution {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .review-rule {
+      display: block;
+      width: 24px;
+      height: 1px;
+      background-color: var(--sand);
+      flex-shrink: 0;
+    }
+
+    .review-author {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .review-stars {
+      font-size: 0.65rem;
+      color: var(--sand);
+      letter-spacing: 0.1em;
+      margin-left: auto;
+    }
+
+    /* ============================
+       RESERVEER / CONTACT
+    ============================ */
+    .contact {
+      background-color: var(--bg-alt);
+      padding: clamp(5rem, 10vh, 9rem) clamp(1.5rem, 6vw, 6rem);
+      border-top: 1px solid var(--rule);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-inner {
+      max-width: 680px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-h2 {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 1.0;
+      color: var(--text);
+      margin-bottom: clamp(2.5rem, 5vh, 4rem);
+    }
+
+    .contact-phone-block {
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-phone-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-phone {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: var(--text);
+      display: block;
+      line-height: 1;
+    }
+
+    .contact-phone:hover {
+      color: var(--sage-dark);
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--text-muted);
+    }
+
+    .contact-detail a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+
+    .contact-detail a:hover {
+      color: var(--sage-dark);
+    }
+
+    .contact-detail-icon {
+      color: var(--sand);
+      flex-shrink: 0;
+    }
+
+    .hours-table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 420px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hours-table tr {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .hours-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .hours-table td {
+      padding: 0.6rem 0;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--text-muted);
+    }
+
+    .hours-table td:first-child {
+      font-weight: 400;
+      color: var(--text);
+      width: 45%;
+    }
+
+    .hours-table .closed {
+      color: rgba(122, 106, 86, 0.5);
+      font-style: italic;
+    }
+
+    .contact-decoration {
+      position: absolute;
+      right: clamp(1rem, 6vw, 5rem);
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.12;
+      pointer-events: none;
+      width: clamp(200px, 30vw, 360px);
+    }
+
+    /* ============================
+       FOOTER
+    ============================ */
+    .footer {
+      background-color: var(--bg);
+      border-top: 1px solid var(--rule);
+      padding: 3rem clamp(1.5rem, 6vw, 6rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.3rem;
+      color: var(--text);
+    }
+
+    .footer-address {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .footer-social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      transition: color 0.2s;
+      min-width: 44px;
+      min-height: 44px;
+    }
+
+    .footer-social-link:hover {
+      color: var(--sage-dark);
+    }
+
+    .footer-copy {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      opacity: 0.6;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ============================
+       REVEAL ANIMATIONS
+    ============================ */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes wordReveal {
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================
+       RESPONSIVE
+    ============================ */
+    @media (max-width: 900px) {
+      .storia-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .storia-illustration {
+        order: -1;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-watermark {
+        opacity: 0.06;
+        width: 200px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        grid-template-columns: 1fr auto;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      .hero-lower {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-lower-left {
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .recensioni-header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .contact-decoration {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-word--sage .hero-word-inner {
+        padding-left: 1rem;
+      }
+    }
+
+    /* ============================
+       REDUCED MOTION
+    ============================ */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-delay: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+      }
+
+      .hero-location,
+      .hero-word-inner,
+      .hero-rule {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+      }
+
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .menu-item {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================
+       NAVIGATION
+  ============================ -->
+  <header>
+    <nav class="nav" id="nav" aria-label="Hoofdnavigatie">
+      <a href="/" class="nav-brand" aria-label="Osteria della Piazza — naar de homepage">Osteria della Piazza</a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#menu">Il Menù</a></li>
+        <li><a href="#storia">La Storia</a></li>
+        <li><a href="#reserveer">Reserveer</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#reserveer">Reserveer een tafel</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navMobile">
+        <span aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <nav class="nav-mobile" id="navMobile" aria-label="Mobiele navigatie">
+      <a href="#menu" onclick="closeMobileNav()">Il Menù</a>
+      <a href="#storia" onclick="closeMobileNav()">La Storia</a>
+      <a href="#reserveer" onclick="closeMobileNav()">Reserveer</a>
+      <a href="#reserveer" onclick="closeMobileNav()">Reserveer een tafel →</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================
+         HERO
+    ============================ -->
+    <section class="hero" aria-label="Welkom bij Osteria della Piazza">
+
+      <!-- Olive branch watermark -->
+      <svg class="hero-watermark" aria-hidden="true" viewBox="0 0 260 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Main stem -->
+        <path d="M130 400 C128 360 118 320 122 280 C126 240 138 210 132 170 C126 130 112 100 118 60 C122 35 130 20 130 20" stroke="#4a6e4e" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <!-- Leaves left -->
+        <ellipse cx="105" cy="370" rx="18" ry="9" transform="rotate(-35 105 370)" fill="#7a9e7e"/>
+        <ellipse cx="96" cy="330" rx="20" ry="9" transform="rotate(-40 96 330)" fill="#7a9e7e"/>
+        <ellipse cx="108" cy="288" rx="18" ry="8" transform="rotate(-32 108 288)" fill="#7a9e7e"/>
+        <ellipse cx="100" cy="248" rx="19" ry="9" transform="rotate(-38 100 248)" fill="#7a9e7e"/>
+        <ellipse cx="110" cy="205" rx="17" ry="8" transform="rotate(-30 110 205)" fill="#7a9e7e"/>
+        <!-- Leaves right -->
+        <ellipse cx="152" cy="350" rx="18" ry="9" transform="rotate(38 152 350)" fill="#7a9e7e"/>
+        <ellipse cx="158" cy="310" rx="20" ry="9" transform="rotate(42 158 310)" fill="#7a9e7e"/>
+        <ellipse cx="148" cy="268" rx="18" ry="8" transform="rotate(35 148 268)" fill="#7a9e7e"/>
+        <ellipse cx="154" cy="228" rx="19" ry="9" transform="rotate(40 154 228)" fill="#7a9e7e"/>
+        <ellipse cx="144" cy="186" rx="17" ry="8" transform="rotate(33 144 186)" fill="#7a9e7e"/>
+        <ellipse cx="150" cy="148" rx="15" ry="7" transform="rotate(36 150 148)" fill="#7a9e7e"/>
+        <ellipse cx="112" cy="162" rx="15" ry="7" transform="rotate(-28 112 162)" fill="#7a9e7e"/>
+        <!-- Small olives -->
+        <circle cx="100" cy="305" r="5" fill="#4a6e4e" opacity="0.6"/>
+        <circle cx="156" cy="285" r="4.5" fill="#4a6e4e" opacity="0.6"/>
+        <circle cx="104" cy="228" r="4" fill="#4a6e4e" opacity="0.6"/>
+      </svg>
+
+      <div class="hero-upper">
+        <p class="hero-location">Delft, aan de gracht</p>
+
+        <h1 class="hero-h1" aria-label="Osteria della Piazza">
+          <span class="hero-word">
+            <span class="hero-word-inner" style="animation-delay: 0.25s;">Osteria</span>
+          </span>
+          <span class="hero-word hero-word--sage">
+            <span class="hero-word-inner" style="animation-delay: 0.45s;">della</span>
+          </span>
+          <span class="hero-word hero-word--piazza">
+            <span class="hero-word-inner" style="animation-delay: 0.65s;">Piazza</span>
+          </span>
+        </h1>
+        <span class="hero-rule" aria-hidden="true"></span>
+      </div>
+
+      <div class="hero-lower">
+        <div class="hero-lower-left">
+          <p class="hero-tagline">Cucina italiana zoals het thuishoort&nbsp;— simpel, eerlijk, seizoensgebonden.</p>
+        </div>
+        <div class="hero-lower-right">
+          <div class="hero-hours">
+            <strong>Ma–Di</strong> gesloten<br />
+            <strong>Wo–Do</strong> 12:00–22:00<br />
+            <strong>Vr–Za</strong> 12:00–23:00<br />
+            <strong>Zo</strong> 12:00–21:30
+          </div>
+          <a href="#reserveer" class="hero-cta-link" aria-label="Reserveer een tafel bij Osteria della Piazza">
+            Reserveer een tafel
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+              <path d="M1 6h13M9 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         LA STORIA
+    ============================ -->
+    <section class="storia" id="storia" aria-label="La Storia — ons verhaal">
+      <div class="storia-inner">
+        <div class="storia-text">
+          <p class="section-label reveal">La Storia</p>
+          <h2 class="storia-h2 reveal">
+            <em>Een tafel</em><br />in Delft
+          </h2>
+          <p class="storia-p reveal">
+            Matteo Ricci opende de osteria in 2018, na jaren in Toscane en Umbrië te hebben gekookt. Hij verhuisde naar Delft voor zijn Nederlandse vrouw Lisa, en bracht zijn liefde voor eenvoudige, seizoensgebonden Italiaanse keuken mee.
+          </p>
+          <p class="storia-p reveal">
+            De kaart verandert met de seizoenen. Sommige gerechten staan er al zeven jaar op — omdat je bepaalde dingen niet hoeft te verbeteren.
+          </p>
+        </div>
+
+        <div class="storia-illustration reveal" aria-hidden="true">
+          <!-- Wine glass + olive branch botanical illustration -->
+          <svg viewBox="0 0 240 340" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:280px;">
+            <!-- Wine glass -->
+            <path d="M120 280 L120 195" stroke="#4a6e4e" stroke-width="1.8" stroke-linecap="round"/>
+            <!-- Base -->
+            <path d="M90 280 Q120 278 150 280" stroke="#4a6e4e" stroke-width="1.8" stroke-linecap="round"/>
+            <!-- Stem -->
+            <path d="M120 195 L120 170" stroke="#4a6e4e" stroke-width="1.8" stroke-linecap="round"/>
+            <!-- Bowl outline -->
+            <path d="M88 110 Q80 135 82 155 Q88 180 120 192 Q152 180 158 155 Q160 135 152 110 Z" stroke="#4a6e4e" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+            <!-- Wine fill -->
+            <path d="M92 148 Q88 165 90 175 Q95 185 120 190 Q145 185 150 175 Q152 165 148 148 Z" fill="#7a9e7e" opacity="0.2"/>
+            <!-- Rim line -->
+            <path d="M88 110 Q120 104 152 110" stroke="#4a6e4e" stroke-width="1.2" fill="none"/>
+
+            <!-- Olive branch left side of glass -->
+            <path d="M75 120 C60 140 48 165 38 190 C30 210 25 240 20 265" stroke="#4a6e4e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <!-- Leaves on left branch -->
+            <ellipse cx="62" cy="133" rx="14" ry="6" transform="rotate(-50 62 133)" fill="#7a9e7e" opacity="0.7"/>
+            <ellipse cx="50" cy="155" rx="15" ry="6" transform="rotate(-45 50 155)" fill="#7a9e7e" opacity="0.7"/>
+            <ellipse cx="40" cy="178" rx="14" ry="6" transform="rotate(-48 40 178)" fill="#7a9e7e" opacity="0.7"/>
+            <ellipse cx="30" cy="200" rx="13" ry="6" transform="rotate(-42 30 200)" fill="#7a9e7e" opacity="0.7"/>
+            <ellipse cx="23" cy="225" rx="14" ry="6" transform="rotate(-50 23 225)" fill="#7a9e7e" opacity="0.7"/>
+            <!-- Olives left -->
+            <circle cx="44" cy="143" r="4" fill="#4a6e4e" opacity="0.5"/>
+            <circle cx="34" cy="187" r="3.5" fill="#4a6e4e" opacity="0.5"/>
+            <circle cx="26" cy="213" r="3.5" fill="#4a6e4e" opacity="0.5"/>
+
+            <!-- Branch right side -->
+            <path d="M165 120 C180 140 192 165 202 190 C210 210 215 240 220 265" stroke="#4a6e4e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <!-- Leaves right branch -->
+            <ellipse cx="178" cy="133" rx="14" ry="6" transform="rotate(50 178 133)" fill="#7a9e7e" opacity="0.7"/>
+            <ellipse cx="190" cy="155" rx="15" ry="6" transform="rotate(45 190 155)" fill="#7a9e7e" opacity="0.7"/>
+            <ellipse cx="200" cy="178" rx="14" ry="6" transform="rotate(48 200 178)" fill="#7a9e7e" opacity="0.7"/>
+            <ellipse cx="210" cy="200" rx="13" ry="6" transform="rotate(42 210 200)" fill="#7a9e7e" opacity="0.7"/>
+            <ellipse cx="217" cy="225" rx="14" ry="6" transform="rotate(50 217 225)" fill="#7a9e7e" opacity="0.7"/>
+            <!-- Olives right -->
+            <circle cx="196" cy="143" r="4" fill="#4a6e4e" opacity="0.5"/>
+            <circle cx="206" cy="187" r="3.5" fill="#4a6e4e" opacity="0.5"/>
+            <circle cx="214" cy="213" r="3.5" fill="#4a6e4e" opacity="0.5"/>
+
+            <!-- Small decorative stars/dots -->
+            <circle cx="120" cy="75" r="1.5" fill="#c4a47a" opacity="0.6"/>
+            <circle cx="110" cy="68" r="1" fill="#c4a47a" opacity="0.4"/>
+            <circle cx="130" cy="68" r="1" fill="#c4a47a" opacity="0.4"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         IL MENÙ
+    ============================ -->
+    <section class="menu" id="menu" aria-label="Il Menù">
+      <div class="menu-header reveal">
+        <p class="section-label">Il Menù</p>
+        <h2 class="menu-h2">La Cucina</h2>
+        <p class="menu-subtitle">Seizoensgebonden · Vers · Eerlijk</p>
+      </div>
+
+      <div class="menu-grid">
+
+        <!-- ANTIPASTI -->
+        <div class="menu-category" aria-label="Antipasti">
+          <h3 class="menu-category-name">Antipasti</h3>
+          <span class="menu-category-sub">Voorgerechten</span>
+
+          <article class="menu-item" aria-label="Burrata con pistacchio, €14">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Burrata con pistacchio</span>
+              <span class="menu-item-desc">Verse burrata, pistachiocrème, rucola, grissini</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€14</span>
+          </article>
+
+          <article class="menu-item" aria-label="Vitello Tonnato, €15">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Vitello Tonnato</span>
+              <span class="menu-item-desc">Gekookt kalfsvlees, tonijnsaus, kappertjes</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€15</span>
+          </article>
+
+          <article class="menu-item" aria-label="Tagliere della Casa, €18">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Tagliere della Casa</span>
+              <span class="menu-item-desc">Gemengd vleeswaren- en kaasplankje</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€18</span>
+          </article>
+
+          <article class="menu-item" aria-label="Zuppa di Lenticchie, €11">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Zuppa di Lenticchie</span>
+              <span class="menu-item-desc">Linzensoep met rozemarijn en pancetta</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€11</span>
+          </article>
+        </div>
+
+        <!-- SECONDI -->
+        <div class="menu-category" aria-label="Secondi">
+          <h3 class="menu-category-name">Secondi</h3>
+          <span class="menu-category-sub">Hoofdgerechten</span>
+
+          <article class="menu-item" aria-label="Costolette d'Agnello, €29">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Costolette d'Agnello</span>
+              <span class="menu-item-desc">Lamskoteletjes met salvia-boter, gegrilde polenta</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€29</span>
+          </article>
+
+          <article class="menu-item" aria-label="Branzino al Forno, €27">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Branzino al Forno</span>
+              <span class="menu-item-desc">Zeebaars met kappertjes, citroen, Taggiasca olijven</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€27</span>
+          </article>
+
+          <article class="menu-item" aria-label="Pollo alla Diavola, €24">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Pollo alla Diavola</span>
+              <span class="menu-item-desc">Gegrilde kip, pikante marinade, citroen</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€24</span>
+          </article>
+        </div>
+
+        <!-- PRIMI -->
+        <div class="menu-category" aria-label="Primi — Pasta e Risotto">
+          <h3 class="menu-category-name">Primi</h3>
+          <span class="menu-category-sub">Pasta &amp; Risotto</span>
+
+          <article class="menu-item" aria-label="Pappardelle al Cinghiale, €22">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Pappardelle al Cinghiale</span>
+              <span class="menu-item-desc">Brede linten met wildragù, chianti-reductie</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€22</span>
+          </article>
+
+          <article class="menu-item" aria-label="Tagliatelle al Tartufo, €28">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Tagliatelle al Tartufo</span>
+              <span class="menu-item-desc">Verse pasta, zwarte truffel, parmigiano</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€28</span>
+          </article>
+
+          <article class="menu-item" aria-label="Risotto al Limone, €21">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Risotto al Limone</span>
+              <span class="menu-item-desc">Citroenrisotto, gebakken kabeljauw, erwtjes</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€21</span>
+          </article>
+
+          <article class="menu-item" aria-label="Spaghetti alle Vongole, €23">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Spaghetti alle Vongole</span>
+              <span class="menu-item-desc">Mosselen, witte wijn, knoflook, peterselie</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€23</span>
+          </article>
+
+          <article class="menu-item" aria-label="Lasagne della Nonna, €19">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Lasagne della Nonna</span>
+              <span class="menu-item-desc">Matteo's moeder's recept, ragù, béchamel</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€19</span>
+          </article>
+        </div>
+
+        <!-- DOLCI -->
+        <div class="menu-category" aria-label="Dolci">
+          <h3 class="menu-category-name">Dolci</h3>
+          <span class="menu-category-sub">Nagerechten</span>
+
+          <article class="menu-item" aria-label="Tiramisù della Casa, €8">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Tiramisù della Casa</span>
+              <span class="menu-item-desc">Huisgemaakt, elke dag vers</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€8</span>
+          </article>
+
+          <article class="menu-item" aria-label="Panna Cotta al Bergamotto, €9">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Panna Cotta al Bergamotto</span>
+              <span class="menu-item-desc">Bergamotpanna cotta, aardbeicoulis</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€9</span>
+          </article>
+
+          <article class="menu-item" aria-label="Affogato al Caffè, €7">
+            <div class="menu-item-left">
+              <span class="menu-item-name">Affogato al Caffè</span>
+              <span class="menu-item-desc">Vanille-ijs, espresso, amaretto</span>
+            </div>
+            <span class="menu-item-dots" aria-hidden="true"></span>
+            <span class="menu-item-price">€7</span>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================
+         LE RECENSIONI
+    ============================ -->
+    <section class="recensioni" aria-label="Le Recensioni — beoordelingen">
+      <div class="recensioni-header reveal">
+        <h2 class="recensioni-h2">Le Recensioni</h2>
+        <div class="recensioni-rating">
+          <strong>4.8</strong><br />
+          op 187 beoordelingen
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+
+        <article class="review reveal" aria-label="Beoordeling van Helena Smits">
+          <span class="review-quote" aria-hidden="true">&ldquo;</span>
+          <blockquote class="review-text">
+            De pappardelle met wildragù is reden genoeg om twee keer per maand te komen. Matteo kookt zoals zijn oma hem heeft geleerd: met geduld en zonder compromis.
+          </blockquote>
+          <footer class="review-attribution">
+            <span class="review-rule" aria-hidden="true"></span>
+            <cite class="review-author">Helena Smits, Delft</cite>
+            <span class="review-stars" aria-label="5 sterren">★★★★★</span>
+          </footer>
+        </article>
+
+        <article class="review reveal" aria-label="Beoordeling van Robbert van Houten">
+          <span class="review-quote" aria-hidden="true">&ldquo;</span>
+          <blockquote class="review-text">
+            Heb overal in Nederland Italiaans gegeten. Dit is de enige plek waar het voelt alsof je echt in Italië zit. De lasagne is een belevenis.
+          </blockquote>
+          <footer class="review-attribution">
+            <span class="review-rule" aria-hidden="true"></span>
+            <cite class="review-author">Robbert van Houten, Rijswijk</cite>
+            <span class="review-stars" aria-label="5 sterren">★★★★★</span>
+          </footer>
+        </article>
+
+        <article class="review reveal" aria-label="Beoordeling van Anna Fischer">
+          <span class="review-quote" aria-hidden="true">&ldquo;</span>
+          <blockquote class="review-text">
+            Kleine kaart, maar elke keuze klopt. Ik neem altijd de burrata als start — die pistachiocrème is verslaving.
+          </blockquote>
+          <footer class="review-attribution">
+            <span class="review-rule" aria-hidden="true"></span>
+            <cite class="review-author">Anna Fischer, Delft</cite>
+            <span class="review-stars" aria-label="4 sterren">★★★★☆</span>
+          </footer>
+        </article>
+
+        <article class="review reveal" aria-label="Beoordeling van Sven Borghans">
+          <span class="review-quote" aria-hidden="true">&ldquo;</span>
+          <blockquote class="review-text">
+            Het personeel weet wat service is. Ze vertellen spontaan welke pasta van die dag vers is. Kleine dingen die het verschil maken.
+          </blockquote>
+          <footer class="review-attribution">
+            <span class="review-rule" aria-hidden="true"></span>
+            <cite class="review-author">Sven Borghans, Den Haag</cite>
+            <span class="review-stars" aria-label="5 sterren">★★★★★</span>
+          </footer>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================
+         RESERVEER / CONTACT
+    ============================ -->
+    <section class="contact" id="reserveer" aria-label="Reserveren en contact">
+
+      <!-- Contact decoration: olive branch -->
+      <svg class="contact-decoration" aria-hidden="true" viewBox="0 0 240 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M120 370 C118 328 106 288 110 248 C114 208 128 178 122 138 C116 98 100 68 108 30 C112 12 120 5 120 5" stroke="#4a6e4e" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <ellipse cx="94" cy="340" rx="18" ry="8" transform="rotate(-35 94 340)" fill="#7a9e7e"/>
+        <ellipse cx="85" cy="300" rx="20" ry="9" transform="rotate(-40 85 300)" fill="#7a9e7e"/>
+        <ellipse cx="96" cy="260" rx="18" ry="8" transform="rotate(-32 96 260)" fill="#7a9e7e"/>
+        <ellipse cx="88" cy="220" rx="19" ry="8" transform="rotate(-38 88 220)" fill="#7a9e7e"/>
+        <ellipse cx="98" cy="180" rx="17" ry="7" transform="rotate(-30 98 180)" fill="#7a9e7e"/>
+        <ellipse cx="90" cy="142" rx="15" ry="7" transform="rotate(-28 90 142)" fill="#7a9e7e"/>
+        <ellipse cx="144" cy="320" rx="18" ry="8" transform="rotate(38 144 320)" fill="#7a9e7e"/>
+        <ellipse cx="152" cy="280" rx="20" ry="9" transform="rotate(42 152 280)" fill="#7a9e7e"/>
+        <ellipse cx="142" cy="240" rx="18" ry="8" transform="rotate(35 142 240)" fill="#7a9e7e"/>
+        <ellipse cx="148" cy="200" rx="19" ry="8" transform="rotate(40 148 200)" fill="#7a9e7e"/>
+        <ellipse cx="138" cy="160" rx="17" ry="7" transform="rotate(33 138 160)" fill="#7a9e7e"/>
+        <ellipse cx="145" cy="125" rx="15" ry="7" transform="rotate(36 145 125)" fill="#7a9e7e"/>
+        <circle cx="88" cy="278" r="4.5" fill="#4a6e4e" opacity="0.5"/>
+        <circle cx="148" cy="258" r="4" fill="#4a6e4e" opacity="0.5"/>
+        <circle cx="92" cy="202" r="4" fill="#4a6e4e" opacity="0.5"/>
+        <circle cx="144" cy="182" r="3.5" fill="#4a6e4e" opacity="0.5"/>
+      </svg>
+
+      <div class="contact-inner">
+        <p class="section-label reveal">Reserveer</p>
+        <h2 class="contact-h2 reveal">Wij zien<br />u graag</h2>
+
+        <div class="contact-phone-block reveal">
+          <p class="contact-phone-label">Bel voor reservering</p>
+          <a href="tel:+31152157833" class="contact-phone" aria-label="Bel Osteria della Piazza: plus 31 15 215 78 33">+31 15 215 78 33</a>
+        </div>
+
+        <div class="contact-details reveal">
+          <div class="contact-detail">
+            <svg class="contact-detail-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <path d="M7.5 1C5.01 1 3 3.01 3 5.5C3 8.96 7.5 14 7.5 14C7.5 14 12 8.96 12 5.5C12 3.01 9.99 1 7.5 1ZM7.5 7C6.67 7 6 6.33 6 5.5C6 4.67 6.67 4 7.5 4C8.33 4 9 4.67 9 5.5C9 6.33 8.33 7 7.5 7Z" fill="currentColor"/>
+            </svg>
+            <span>Voldersgracht 3, 2611 EL Delft</span>
+          </div>
+          <div class="contact-detail">
+            <svg class="contact-detail-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <path d="M2 3C2 2.45 2.45 2 3 2H5.5L6.5 5L5 6C5.55 7.42 7.58 9.45 9 10L10 8.5L13 9.5V12C13 12.55 12.55 13 12 13C6.48 13 2 8.52 2 3Z" fill="currentColor"/>
+            </svg>
+            <a href="tel:+31152157833" aria-label="Bel ons">+31 15 215 78 33</a>
+          </div>
+          <div class="contact-detail">
+            <svg class="contact-detail-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <path d="M2 3H13C13.55 3 14 3.45 14 4V11C14 11.55 13.55 12 13 12H2C1.45 12 1 11.55 1 11V4C1 3.45 1.45 3 2 3ZM7.5 8.5L13 4.5V4H2V4.5L7.5 8.5ZM2 5.5V11H13V5.5L7.5 9.5L2 5.5Z" fill="currentColor"/>
+            </svg>
+            <a href="mailto:reserveer@osteriadellapiazza.nl">reserveer@osteriadellapiazza.nl</a>
+          </div>
+        </div>
+
+        <table class="hours-table reveal" aria-label="Openingstijden">
+          <caption class="section-label" style="text-align:left; margin-bottom: 0.8rem; caption-side: top;">Openingstijden</caption>
+          <tbody>
+            <tr>
+              <td>Maandag – Dinsdag</td>
+              <td class="closed">Gesloten</td>
+            </tr>
+            <tr>
+              <td>Woensdag – Donderdag</td>
+              <td>12:00 – 22:00</td>
+            </tr>
+            <tr>
+              <td>Vrijdag – Zaterdag</td>
+              <td>12:00 – 23:00</td>
+            </tr>
+            <tr>
+              <td>Zondag</td>
+              <td>12:00 – 21:30</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================
+       FOOTER
+  ============================ -->
+  <footer class="footer">
+    <div class="footer-brand">Osteria della Piazza</div>
+    <div class="footer-address">Voldersgracht 3, 2611 EL Delft &nbsp;·&nbsp; +31 15 215 78 33</div>
+    <div class="footer-divider" aria-hidden="true"></div>
+    <nav class="footer-socials" aria-label="Social media">
+      <a href="https://www.instagram.com/osteriadellapiazza" class="footer-social-link" aria-label="Volg ons op Instagram" target="_blank" rel="noopener noreferrer">
+        <!-- Instagram icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/osteriadellapiazza.delft" class="footer-social-link" aria-label="Volg ons op Facebook" target="_blank" rel="noopener noreferrer">
+        <!-- Facebook icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+      </a>
+    </nav>
+    <p class="footer-copy">&copy; 2025 Osteria della Piazza &mdash; Alle rechten voorbehouden</p>
+  </footer>
+
+  <!-- ============================
+       JAVASCRIPT
+  ============================ -->
+  <script>
+    // Respect reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ---- Nav scroll effect ----
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ---- Mobile nav toggle ----
+    const navToggle = document.getElementById('navToggle');
+    const navMobile = document.getElementById('navMobile');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navMobile.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Menu sluiten' : 'Menu openen');
+    });
+
+    function closeMobileNav() {
+      navMobile.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Menu openen');
+    }
+
+    // Close mobile nav on outside click
+    document.addEventListener('click', (e) => {
+      if (navMobile.classList.contains('open') &&
+          !navMobile.contains(e.target) &&
+          !navToggle.contains(e.target)) {
+        closeMobileNav();
+      }
+    });
+
+    // ---- Hero word reveal ----
+    if (!prefersReducedMotion) {
+      const wordInners = document.querySelectorAll('.hero-word-inner');
+      wordInners.forEach((el) => {
+        el.classList.add('animate');
+      });
+    } else {
+      document.querySelectorAll('.hero-word-inner').forEach(el => {
+        el.style.transform = 'none';
+        el.style.opacity = '1';
+      });
+    }
+
+    // ---- Intersection Observer for scroll reveals ----
+    if (!prefersReducedMotion) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        revealObserver.observe(el);
+      });
+
+      // ---- Menu items staggered reveal ----
+      const menuObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const items = entry.target.querySelectorAll('.menu-item');
+            items.forEach((item, i) => {
+              setTimeout(() => {
+                item.classList.add('visible');
+              }, i * 70);
+            });
+            menuObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.05,
+        rootMargin: '0px 0px -20px 0px'
+      });
+
+      document.querySelectorAll('.menu-category').forEach(cat => {
+        menuObserver.observe(cat);
+      });
+
+    } else {
+      // No animation: make everything visible
+      document.querySelectorAll('.reveal').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+      document.querySelectorAll('.menu-item').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
