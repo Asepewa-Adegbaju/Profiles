@@ -44,8 +44,9 @@ $router->post('/logout','AuthController', 'logout');
 $router->get('/',          'DashboardController', 'index');
 $router->get('/dashboard', 'DashboardController', 'index');
 
-// Modules worden hier later toegevoegd per stap:
-// CRM, Uren, Projecten, Financiën
+// Modules
+require APP_ROOT . '/routes_time.php';
+require APP_ROOT . '/routes_projects.php';
 
 // ─── Dispatchen ──────────────────────────────────────────────────────────────
 $router->dispatch(
