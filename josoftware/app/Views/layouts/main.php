@@ -50,7 +50,11 @@ function navActive(string $route, string $current): string {
                 </a>
                 <a href="<?= APP_URL ?>/uren" class="<?= navActive('/uren', $path) ?>">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    Uren & Kilometers
+                    Uren
+                </a>
+                <a href="<?= APP_URL ?>/kilometers" class="<?= navActive('/kilometers', $path) ?>">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6l9-3 9 3M3 18l9 3 9-3"/></svg>
+                    Kilometers
                 </a>
                 <a href="<?= APP_URL ?>/projecten" class="<?= navActive('/projecten', $path) ?>">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>

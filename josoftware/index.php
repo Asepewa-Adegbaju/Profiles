@@ -45,8 +45,10 @@ $router->get('/',          'DashboardController', 'index');
 $router->get('/dashboard', 'DashboardController', 'index');
 
 // Modules
+require APP_ROOT . '/routes_crm.php';
 require APP_ROOT . '/routes_time.php';
 require APP_ROOT . '/routes_projects.php';
+require APP_ROOT . '/routes_finance.php';
 
 // ─── Dispatchen ──────────────────────────────────────────────────────────────
 $router->dispatch(

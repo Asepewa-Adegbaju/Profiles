@@ -96,7 +96,7 @@ class FinanceController
             ]);
         }
 
-        AuditLog::log('create', 'quotes', $quoteId, 'Offerte aangemaakt: ' . Quote::find($quoteId)['quote_number']);
+        AuditLog::log('create', 'quotes', $quoteId, 'Offerte aangemaakt: ' . (Quote::find($quoteId)['quote_number'] ?? (string) $quoteId));
         Session::flash('success', 'Offerte is aangemaakt.');
         header('Location: ' . APP_URL . '/financien/offertes/' . $quoteId); exit;
     }
@@ -248,7 +248,7 @@ class FinanceController
             ]);
         }
 
-        AuditLog::log('create', 'invoices', $invoiceId, 'Factuur aangemaakt: ' . Invoice::find($invoiceId)['invoice_number']);
+        AuditLog::log('create', 'invoices', $invoiceId, 'Factuur aangemaakt: ' . (Invoice::find($invoiceId)['invoice_number'] ?? (string) $invoiceId));
         Session::flash('success', 'Factuur is aangemaakt.');
         header('Location: ' . APP_URL . '/financien/facturen/' . $invoiceId); exit;
     }
