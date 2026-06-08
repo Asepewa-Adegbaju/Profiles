@@ -49,6 +49,7 @@ require APP_ROOT . '/routes_crm.php';
 require APP_ROOT . '/routes_time.php';
 require APP_ROOT . '/routes_projects.php';
 require APP_ROOT . '/routes_finance.php';
+require APP_ROOT . '/routes_expenses.php';
 
 // ─── Dispatchen ──────────────────────────────────────────────────────────────
 $router->dispatch(
