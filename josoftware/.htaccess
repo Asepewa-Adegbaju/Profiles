@@ -1,0 +1,32 @@
+# ── Beveiliging ────────────────────────────────────────────────
+Options -Indexes
+ServerSignature Off
+
+# ── Front Controller (URL-rewrite) ────────────────────────────
+RewriteEngine On
+
+# Pas RewriteBase aan als de app in een submap staat
+# Root van hosting: RewriteBase /
+# Submap josoftware/: RewriteBase /josoftware/
+RewriteBase /josoftware/
+
+# Laat echte bestanden en mappen door (css, js, afbeeldingen)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Alles anders → front controller
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# ── Blokkeer gevoelige bestanden ──────────────────────────────
+<FilesMatch "\.(env|log|sql|json|lock|md|sh|yml|yaml|ini|bak)$">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
+
+# ── HTTP Security Headers ─────────────────────────────────────
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

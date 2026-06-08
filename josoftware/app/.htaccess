@@ -1,0 +1,3 @@
+# Blokkeer directe browser-toegang tot alle PHP-bestanden in app/
+Order deny,allow
+Deny from all
