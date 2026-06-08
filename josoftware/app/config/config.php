@@ -13,7 +13,7 @@ define('DB_CHARSET', 'utf8mb4');
 define('APP_NAME',    'JO Software Solutions');
 define('APP_URL',     'http://localhost/josoftware'); // Productie: https://jouwdomein.nl
 define('APP_ENV',     'development');                // Productie: 'production'
-define('APP_ROOT',    dirname(__DIR__, 2));
+defined('APP_ROOT') || define('APP_ROOT', dirname(__DIR__, 2));
 
 // ─── Sessie ───────────────────────────────────────────────────────────────────
 define('SESSION_NAME',     'jos_sess');
