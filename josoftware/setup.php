@@ -1,17 +1,12 @@
 <?php
 /**
  * EENMALIG GEBRUIK — VERWIJDER DIT BESTAND NA GEBRUIK
- *
  * Aanroepen via browser: http://localhost/josoftware/setup.php
- * Of CLI: php setup.php
- *
- * Maakt de twee beheerdersaccounts aan.
  */
 
 define('APP_ROOT', __DIR__);
 require_once APP_ROOT . '/app/config/config.php';
 
-// Veiligheidscheck: blokkeer op productie
 if (APP_ENV === 'production') {
     die('Setup is uitgeschakeld in productie-modus.');
 }
@@ -21,36 +16,45 @@ spl_autoload_register(function (string $class): void {
     if (file_exists($file)) require_once $file;
 });
 
-// Database aanmaken en schema inladen
+// ── Stap 1: Database + tabellen aanmaken ─────────────────────────────────────
 try {
+    // Verbind ZONDER dbname zodat we CREATE DATABASE kunnen uitvoeren
     $pdo = new PDO(
         'mysql:host=' . DB_HOST . ';charset=utf8mb4',
-        DB_USER, DB_PASS,
+        DB_USER,
+        DB_PASS,
         [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
     );
 
     $schema = file_get_contents(APP_ROOT . '/database/schema.sql');
-    foreach (array_filter(array_map('trim', explode(';', $schema))) as $stmt) {
-        if ($stmt !== '') $pdo->exec($stmt);
+
+    // Splits op ; maar sla lege regels en pure commentaarregels over
+    $statements = array_filter(
+        array_map('trim', explode(';', $schema)),
+        fn($s) => $s !== '' && !str_starts_with($s, '--')
+    );
+
+    foreach ($statements as $stmt) {
+        $pdo->exec($stmt);
     }
 
-    echo "✓ Database en tabellen aangemaakt.<br>\n";
+    echo "✓ Database <strong>josoftware_db</strong> en alle tabellen aangemaakt.<br>\n";
 
 } catch (PDOException $e) {
-    die('Database fout: ' . htmlspecialchars($e->getMessage()));
+    die('❌ Database fout: ' . htmlspecialchars($e->getMessage()));
 }
 
-// Gebruikers aanmaken
+// ── Stap 2: Gebruikers aanmaken ───────────────────────────────────────────────
 $users = [
     [
-        'name'     => 'JO Admin',               // ← Pas aan
-        'email'    => 'jij@josoftware.nl',       // ← Pas aan
-        'password' => 'Verander-Dit-Wachtwoord!1', // ← PAS AAN VOOR GEBRUIK
+        'name'     => 'Asepewa',
+        'email'    => 'asepewa123@gmail.com',
+        'password' => 'Asepewa@Jos#2025!',   // ← sterk wachtwoord, onthoud dit
     ],
     [
-        'name'     => 'Vriend Admin',            // ← Pas aan
-        'email'    => 'vriend@josoftware.nl',    // ← Pas aan
-        'password' => 'Verander-Dit-Wachtwoord!2', // ← PAS AAN VOOR GEBRUIK
+        'name'     => 'Michael',
+        'email'    => 'Michaelnwosu2005@gmail.com',
+        'password' => 'Nwosu@Jos#2025!',     // ← sterk wachtwoord, onthoud dit
     ],
 ];
 
@@ -63,5 +67,8 @@ foreach ($users as $u) {
     }
 }
 
-echo "<br><strong style='color:red'>⚠ VERWIJDER DIT BESTAND NU: setup.php</strong><br>\n";
-echo "<a href='" . APP_URL . "/login'>→ Naar het loginscherm</a>\n";
+// ── Klaar ─────────────────────────────────────────────────────────────────────
+echo "<br>";
+echo "<strong style='color:red;font-size:1.1em;'>⚠ VERWIJDER NU DIT BESTAND: setup.php</strong><br>\n";
+echo "<small>Zolang dit bestand bestaat kan iedereen met toegang tot de server de database opnieuw aanmaken.</small><br><br>\n";
+echo "<a href='" . APP_URL . "/login' style='background:#2563eb;color:#fff;padding:.6rem 1.2rem;border-radius:6px;text-decoration:none;'>→ Naar het loginscherm</a>\n";
